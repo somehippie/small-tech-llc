@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Small Tech LLC — A&amp;R, AI training, money, and creative direction</title>
+<meta name="description" content="Small Tech LLC is Paolo Bonaccorsi's practice across A&R, AI training, personal finance, and creative direction — one point of view, four disciplines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:      #F3EEE4;
+    --surface:    #FBF8F2;
+    --ink:        #1B1712;
+    --ink-soft:   #5C5546;
+    --ink-faint:  #8B8474;
+    --rule:       #DED5C1;
+    --rule-soft:  #E8E1D2;
+    --gold:       #A9803F;
+    --gold-dim:   #EEE3CC;
+    --pine:       #3C5748;
+    --pine-dim:   #E1E9E3;
+
+    --f-display: "Fraunces", Georgia, "Times New Roman", serif;
+    --f-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --f-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #14120E;
+      --surface:    #1B1813;
+      --ink:        #EDE7D9;
+      --ink-soft:   #B3AA95;
+      --ink-faint:  #837A67;
+      --rule:       #322C22;
+      --rule-soft:  #26221B;
+      --gold:       #D9AF6B;
+      --gold-dim:   #2C2416;
+      --pine:       #85AB96;
+      --pine-dim:   #1D2823;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:      #14120E;
+    --surface:    #1B1813;
+    --ink:        #EDE7D9;
+    --ink-soft:   #B3AA95;
+    --ink-faint:  #837A67;
+    --rule:       #322C22;
+    --rule-soft:  #26221B;
+    --gold:       #D9AF6B;
+    --gold-dim:   #2C2416;
+    --pine:       #85AB96;
+    --pine-dim:   #1D2823;
+  }
+
+  * { box-sizing: border-box; }
+  html { color-scheme: light dark; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 17px;
+    line-height: 1.65;
+    padding-inline: 24px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; }
+
+  a { color: var(--pine); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+
+  header.masthead {
+    padding-block: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .wordmark {
+    font-family: var(--f-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+  }
+  nav.top { display: flex; gap: 24px; }
+  nav.top a {
+    color: var(--ink-soft);
+    font-size: 14px;
+    font-weight: 500;
+  }
+  nav.top a:hover { color: var(--ink); }
+
+  .hero {
+    padding-block: 88px 64px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero .eyebrow {
+    font-family: var(--f-mono);
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-family: var(--f-display);
+    font-weight: 500;
+    font-style: italic;
+    font-size: clamp(2.3rem, 6vw, 3.6rem);
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    margin: 0 0 26px;
+    text-wrap: balance;
+    max-width: 15ch;
+  }
+  .hero p.lede {
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    color: var(--ink-soft);
+    max-width: 52ch;
+    margin: 0;
+  }
+
+  section { padding-block: 64px; border-bottom: 1px solid var(--rule); }
+  section:last-of-type { border-bottom: none; }
+  .kicker {
+    font-family: var(--f-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-family: var(--f-display);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+    text-wrap: balance;
+  }
+
+  /* practice list */
+  .practices {
+    display: flex;
+    flex-direction: column;
+  }
+  .practice {
+    display: grid;
+    grid-template-columns: minmax(140px, 200px) 1fr;
+    gap: 28px;
+    padding-block: 30px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .practice:first-child { border-top: none; padding-top: 6px; }
+  .practice .name {
+    font-family: var(--f-display);
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .practice .desc { color: var(--ink-soft); max-width: 56ch; }
+  .practice .desc p + p { margin-top: 0.8em; }
+
+  @media (max-width: 620px) {
+    .practice { grid-template-columns: 1fr; gap: 10px; }
+  }
+
+  .philosophy {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .philosophy blockquote {
+    margin: 0;
+    font-family: var(--f-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+    line-height: 1.45;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .philosophy cite {
+    display: block;
+    font-style: normal;
+    font-family: var(--f-mono);
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    margin-top: 14px;
+  }
+
+  .context p { max-width: 62ch; color: var(--ink-soft); }
+  .context p + p { margin-top: 1em; }
+  .context strong { color: var(--ink); font-weight: 600; }
+
+  .contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .contact-block p { max-width: 52ch; color: var(--ink-soft); }
+  .contact-row {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .contact-row a {
+    font-family: var(--f-mono);
+    font-size: 1.05rem;
+    color: var(--ink);
+    background: var(--gold-dim);
+    padding: 10px 16px;
+    border-radius: 3px;
+    text-decoration: none;
+  }
+  .contact-row a:hover { background: var(--pine-dim); color: var(--pine); }
+
+  footer {
+    padding-block: 36px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+
+  @media (max-width: 520px) {
+    .hero { padding-block: 56px 44px; }
+    section { padding-block: 44px; }
+    .philosophy { padding: 26px 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="wordmark">Small Tech LLC</div>
+    <nav class="top" aria-label="Primary">
+      <a href="#practice">Practice</a>
+      <a href="#philosophy">Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Paolo Bonaccorsi &middot; Small Tech LLC</div>
+    <h1>Taste is a technical skill.</h1>
+    <p class="lede">Small Tech LLC is a one-person practice across four disciplines that don't usually share a business card &mdash; artist development, AI training, personal finance, and creative direction. The connecting thread is the same in all four: finding the signal in a lot of noise, then building the thing that makes it obvious to everyone else.</p>
+  </section>
+
+  <section id="practice">
+    <div class="kicker">Practice</div>
+    <h2>Four disciplines, one point of view</h2>
+    <div class="practices">
+      <div class="practice">
+        <div class="name">A&amp;R</div>
+        <div class="desc">
+          <p>Finding artists and songs before the rest of the room does, and telling the truth about what's working and what isn't. Development, not just discovery &mdash; sequencing a catalog, shaping a release, knowing when a song is finished versus when it's just done.</p>
+        </div>
+      </div>
+      <div class="practice">
+        <div class="name">AI Training</div>
+        <div class="desc">
+          <p>Teaching people who are skeptical or overwhelmed how to actually use AI tools &mdash; not the hype version, the working version. Hands-on, plain-language, built for people who've never opened a terminal and don't need to.</p>
+        </div>
+      </div>
+      <div class="practice">
+        <div class="name">Personal Finance</div>
+        <div class="desc">
+          <p>Blunt, specific, numbers-on-the-table money coaching. No vague budgeting advice &mdash; a real look at where the money's going and what to do about it, delivered straight, without judgment attached to the honesty.</p>
+        </div>
+      </div>
+      <div class="practice">
+        <div class="name">Creative Direction</div>
+        <div class="desc">
+          <p>Shaping how a project looks, sounds, and reads before it goes out into the world &mdash; brand, visual identity, the whole first impression. The same signal-finding instinct applied to how something presents itself, not just what it is.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="philosophy">
+    <div class="kicker">Approach</div>
+    <div class="philosophy">
+      <blockquote>&ldquo;The job isn't to add more. It's to find what's already true and get out of its way.&rdquo;</blockquote>
+      <cite>— on how these four practices actually connect</cite>
+    </div>
+  </section>
+
+  <section class="context">
+    <div class="kicker">Background</div>
+    <h2>Where this comes from</h2>
+    <p>Small Tech LLC grew out of work that never fit one job title &mdash; program management on AI evaluation teams, clinical research on wearable health data, and years of finding the through-line in projects other people found confusing. <strong>Finding signal</strong> &mdash; helping people clarify what they actually want and how to get there &mdash; is the skill underneath all four practices above.</p>
+    <p>Based in Fremont, CA.</p>
+  </section>
+
+  <section id="contact">
+    <div class="kicker">Contact</div>
+    <h2>Start a conversation</h2>
+    <div class="contact-block">
+      <p>Whichever of the four this is about, the first step is the same: say what you're working on and what's not working about it.</p>
+      <div class="contact-row">
+        <a href="mailto:hello@smalltech.llc">hello@smalltech.llc</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>Small Tech LLC</div>
+    <div>&copy; 2026</div>
+  </footer>
+
+</div>
+</body>
+</html>
