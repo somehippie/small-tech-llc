@@ -10,20 +10,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper:      #F3EEE4;
-    --surface:    #FBF8F2;
-    --surface-2:  #EFE7D6;
-    --ink:        #1B1712;
-    --ink-soft:   #5C5546;
-    --ink-faint:  #8B8474;
-    --rule:       #DED5C1;
-    --rule-soft:  #E8E1D2;
-    --gold:       #A9803F;
-    --gold-ink:   #7A5C2C;
-    --gold-dim:   #EEE3CC;
+    --paper:      #F2F2F1;
+    --surface:    #FAFAF9;
+    --surface-2:  #E8E8E6;
+    --ink:        #0E0E0E;
+    --ink-soft:   #4A4A48;
+    --ink-faint:  #75756F;
+    --rule:       #DBDBD8;
+    --rule-soft:  #E7E7E4;
     --pine:       #3C5748;
-    --pine-dim:   #E1E9E3;
-    --shadow: 0 1px 2px rgba(27,23,18,.04), 0 12px 28px -12px rgba(27,23,18,.14);
+    --pine-ink:   #2E4437;
+    --pine-dim:   #E3EAE5;
+    --shadow: 0 1px 2px rgba(0,0,0,.05), 0 12px 28px -12px rgba(0,0,0,.16);
 
     --f-display: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --f-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -31,28 +29,25 @@
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --paper:      #14120E;
-      --surface:    #1B1813;
-      --surface-2:  #221E16;
-      --ink:        #EDE7D9;
-      --ink-soft:   #B3AA95;
-      --ink-faint:  #837A67;
-      --rule:       #322C22;
-      --rule-soft:  #26221B;
-      --gold:       #D9AF6B;
-      --gold-ink:   #E8C688;
-      --gold-dim:   #2C2416;
-      --pine:       #85AB96;
-      --pine-dim:   #1D2823;
+      --paper:      #101110;
+      --surface:    #171818;
+      --surface-2:  #1E1F1E;
+      --ink:        #ECECEA;
+      --ink-soft:   #ADADA9;
+      --ink-faint:  #85857F;
+      --rule:       #2C2D2C;
+      --rule-soft:  #232423;
+      --pine:       #8CB39E;
+      --pine-ink:   #A3C7B2;
+      --pine-dim:   #1A2420;
       --shadow: 0 1px 2px rgba(0,0,0,.3), 0 20px 40px -16px rgba(0,0,0,.55);
     }
   }
   :root[data-theme="dark"] {
-    --paper:      #14120E; --surface: #1B1813; --surface-2: #221E16;
-    --ink:        #EDE7D9; --ink-soft: #B3AA95; --ink-faint: #837A67;
-    --rule:       #322C22; --rule-soft: #26221B;
-    --gold:       #D9AF6B; --gold-ink: #E8C688; --gold-dim: #2C2416;
-    --pine:       #85AB96; --pine-dim: #1D2823;
+    --paper:      #101110; --surface: #171818; --surface-2: #1E1F1E;
+    --ink:        #ECECEA; --ink-soft: #ADADA9; --ink-faint: #85857F;
+    --rule:       #2C2D2C; --rule-soft: #232423;
+    --pine:       #8CB39E; --pine-ink: #A3C7B2; --pine-dim: #1A2420;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 20px 40px -16px rgba(0,0,0,.55);
   }
 
@@ -63,7 +58,7 @@
   body {
     margin: 0;
     background:
-      radial-gradient(1200px 500px at 15% -10%, color-mix(in srgb, var(--gold) 7%, transparent), transparent 60%),
+      radial-gradient(1200px 500px at 15% -10%, color-mix(in srgb, var(--pine) 7%, transparent), transparent 60%),
       var(--paper);
     color: var(--ink);
     font-family: var(--f-body);
@@ -73,12 +68,12 @@
   }
   .wrap { max-width: 980px; margin: 0 auto; padding-inline: 24px; }
   a { color: var(--pine); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+  a:focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; border-radius: 2px; }
 
   /* ---- scroll progress ---- */
   .progress {
     position: fixed; top: 0; left: 0; height: 2px; width: 0%;
-    background: var(--gold); z-index: 60; transition: width .1s linear;
+    background: var(--pine); z-index: 60; transition: width .1s linear;
   }
 
   /* ---- sticky nav ---- */
@@ -98,7 +93,7 @@
   nav.top a { color: var(--ink-soft); font-size: 14px; font-weight: 500; text-decoration: none; position: relative; }
   nav.top a::after {
     content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 1px;
-    background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
+    background: var(--pine); transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
   }
   nav.top a:hover::after { transform: scaleX(1); }
   nav.top a:hover { color: var(--ink); }
@@ -147,9 +142,9 @@
   .hero-inner { position: relative; }
   .hero .eyebrow {
     font-family: var(--f-mono); font-size: 12.5px; letter-spacing: 0.08em;
-    color: var(--gold-ink); margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
+    color: var(--pine-ink); margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
   }
-  .hero .eyebrow::before { content: ""; width: 20px; height: 1px; background: var(--gold); display: inline-block; }
+  .hero .eyebrow::before { content: ""; width: 20px; height: 1px; background: var(--pine); display: inline-block; }
   h1 {
     font-family: var(--f-display); font-weight: 600; font-style: normal;
     font-size: clamp(2.6rem, 7vw, 4.6rem); line-height: 1.0; letter-spacing: -0.035em;
@@ -175,7 +170,7 @@
   section { padding-block: 68px; border-bottom: 1px solid var(--rule); }
   section:last-of-type { border-bottom: none; }
   .kicker { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
-  .kicker .n { color: var(--gold-ink); }
+  .kicker .n { color: var(--pine-ink); }
   h2 { font-family: var(--f-display); font-weight: 500; font-size: clamp(1.6rem, 3.2vw, 2.1rem); line-height: 1.15; letter-spacing: -0.022em; margin: 0 0 22px; text-wrap: balance; }
 
   /* ---- practice: hover-expand cards ---- */
@@ -190,7 +185,7 @@
     transition: background .25s ease;
   }
   .practice:hover { background: var(--surface-2); }
-  .practice .num { font-family: var(--f-mono); font-size: 12px; color: var(--gold-ink); }
+  .practice .num { font-family: var(--f-mono); font-size: 12px; color: var(--pine-ink); }
   .practice .name { font-family: var(--f-display); font-weight: 500; font-size: 1.35rem; color: var(--ink); line-height: 1.25; }
   .practice .desc { color: var(--ink-soft); max-width: 42ch; font-size: 15px; }
 
@@ -198,7 +193,7 @@
   .quote-wrap { position: relative; padding: 8px 0 8px 44px; }
   .quote-wrap::before {
     content: "\201C"; position: absolute; left: -4px; top: -28px;
-    font-family: var(--f-display); font-size: 7rem; color: var(--gold); opacity: .35; line-height: 1;
+    font-family: var(--f-display); font-size: 7rem; color: var(--pine); opacity: .35; line-height: 1;
   }
   blockquote.pull {
     margin: 0; font-family: var(--f-display); font-style: italic; font-weight: 500;
@@ -215,7 +210,7 @@
   .contact-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
   .contact-row a.big {
     font-family: var(--f-mono); font-size: 1.1rem; color: var(--ink);
-    background: var(--gold-dim); padding: 14px 22px; border-radius: 5px;
+    background: var(--surface-2); padding: 14px 22px; border-radius: 5px;
     text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
     transition: background .2s ease, transform .2s ease; box-shadow: var(--shadow);
   }
@@ -251,10 +246,10 @@
   <section class="hero">
     <div class="hero-photo" aria-hidden="true"></div>
     <svg class="hero-motif" viewBox="0 0 400 400" aria-hidden="true">
-      <circle cx="320" cy="80" r="140" fill="none" stroke="var(--gold)" stroke-width="1"/>
+      <circle cx="320" cy="80" r="140" fill="none" stroke="var(--pine)" stroke-width="1"/>
       <circle cx="320" cy="80" r="100" fill="none" stroke="var(--pine)" stroke-width="1"/>
-      <circle cx="320" cy="80" r="60" fill="none" stroke="var(--gold)" stroke-width="1"/>
-      <path d="M60 340 Q 160 220 320 260" fill="none" stroke="var(--gold)" stroke-width="1"/>
+      <circle cx="320" cy="80" r="60" fill="none" stroke="var(--pine)" stroke-width="1"/>
+      <path d="M60 340 Q 160 220 320 260" fill="none" stroke="var(--pine)" stroke-width="1"/>
     </svg>
     <div class="hero-inner reveal in">
       <div class="eyebrow">Paolo Bonaccorsi &middot; Small Tech LLC</div>
