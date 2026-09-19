@@ -4,23 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Small Tech LLC — A&amp;R, AI training, money, and creative direction</title>
-<meta name="description" content="Small Tech LLC is Paolo Bonaccorsi's practice across A&R, AI training, personal finance, and creative direction — one point of view, four disciplines.">
+<meta name="description" content="Small Tech LLC is Paolo Bonaccorsi's practice at the intersection of music and tech — A&R, AI training, personal finance, and creative direction.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --paper:      #F3EEE4;
     --surface:    #FBF8F2;
+    --surface-2:  #EFE7D6;
     --ink:        #1B1712;
     --ink-soft:   #5C5546;
     --ink-faint:  #8B8474;
     --rule:       #DED5C1;
     --rule-soft:  #E8E1D2;
     --gold:       #A9803F;
+    --gold-ink:   #7A5C2C;
     --gold-dim:   #EEE3CC;
     --pine:       #3C5748;
     --pine-dim:   #E1E9E3;
+    --shadow: 0 1px 2px rgba(27,23,18,.04), 0 12px 28px -12px rgba(27,23,18,.14);
 
     --f-display: "Fraunces", Georgia, "Times New Roman", serif;
     --f-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -30,298 +33,297 @@
     :root:not([data-theme="light"]) {
       --paper:      #14120E;
       --surface:    #1B1813;
+      --surface-2:  #221E16;
       --ink:        #EDE7D9;
       --ink-soft:   #B3AA95;
       --ink-faint:  #837A67;
       --rule:       #322C22;
       --rule-soft:  #26221B;
       --gold:       #D9AF6B;
+      --gold-ink:   #E8C688;
       --gold-dim:   #2C2416;
       --pine:       #85AB96;
       --pine-dim:   #1D2823;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 20px 40px -16px rgba(0,0,0,.55);
     }
   }
   :root[data-theme="dark"] {
-    --paper:      #14120E;
-    --surface:    #1B1813;
-    --ink:        #EDE7D9;
-    --ink-soft:   #B3AA95;
-    --ink-faint:  #837A67;
-    --rule:       #322C22;
-    --rule-soft:  #26221B;
-    --gold:       #D9AF6B;
-    --gold-dim:   #2C2416;
-    --pine:       #85AB96;
-    --pine-dim:   #1D2823;
+    --paper:      #14120E; --surface: #1B1813; --surface-2: #221E16;
+    --ink:        #EDE7D9; --ink-soft: #B3AA95; --ink-faint: #837A67;
+    --rule:       #322C22; --rule-soft: #26221B;
+    --gold:       #D9AF6B; --gold-ink: #E8C688; --gold-dim: #2C2416;
+    --pine:       #85AB96; --pine-dim: #1D2823;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 20px 40px -16px rgba(0,0,0,.55);
   }
 
   * { box-sizing: border-box; }
-  html { color-scheme: light dark; }
+  html { color-scheme: light dark; scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
   body {
     margin: 0;
-    background: var(--paper);
+    background:
+      radial-gradient(1200px 500px at 15% -10%, color-mix(in srgb, var(--gold) 7%, transparent), transparent 60%),
+      var(--paper);
     color: var(--ink);
     font-family: var(--f-body);
     font-size: 17px;
     line-height: 1.65;
-    padding-inline: 24px;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 900px; margin: 0 auto; }
-
+  .wrap { max-width: 980px; margin: 0 auto; padding-inline: 24px; }
   a { color: var(--pine); text-decoration-thickness: 1px; text-underline-offset: 2px; }
   a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
 
+  /* ---- scroll progress ---- */
+  .progress {
+    position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+    background: var(--gold); z-index: 60; transition: width .1s linear;
+  }
+
+  /* ---- sticky nav ---- */
   header.masthead {
-    padding-block: 40px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 16px;
-    flex-wrap: wrap;
+    position: sticky; top: 0; z-index: 50;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 18px 24px;
+    background: color-mix(in srgb, var(--paper) 82%, transparent);
+    backdrop-filter: blur(10px) saturate(1.1);
+    -webkit-backdrop-filter: blur(10px) saturate(1.1);
+    border-bottom: 1px solid transparent;
+    transition: border-color .25s ease, box-shadow .25s ease;
   }
-  .wordmark {
-    font-family: var(--f-display);
-    font-weight: 600;
-    font-size: 1.15rem;
-    letter-spacing: -0.01em;
+  header.masthead.scrolled { border-bottom-color: var(--rule); box-shadow: 0 8px 24px -20px rgba(0,0,0,.4); }
+  .wordmark { font-family: var(--f-display); font-weight: 600; font-size: 1.1rem; letter-spacing: -0.01em; }
+  nav.top { display: flex; gap: 26px; }
+  nav.top a { color: var(--ink-soft); font-size: 14px; font-weight: 500; text-decoration: none; position: relative; }
+  nav.top a::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 1px;
+    background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
   }
-  nav.top { display: flex; gap: 24px; }
-  nav.top a {
-    color: var(--ink-soft);
-    font-size: 14px;
-    font-weight: 500;
-  }
+  nav.top a:hover::after { transform: scaleX(1); }
   nav.top a:hover { color: var(--ink); }
 
+  /* ---- hero ---- */
   .hero {
-    padding-block: 88px 64px;
+    position: relative;
+    padding-block: 108px 76px;
     border-bottom: 1px solid var(--rule);
+    overflow: hidden;
   }
+  .hero-motif {
+    position: absolute; inset: -20% -10% auto auto; width: 62%; aspect-ratio: 1;
+    opacity: .5; pointer-events: none;
+  }
+  @media (prefers-color-scheme: dark) { .hero-motif { opacity: .28; } }
+  :root[data-theme="dark"] .hero-motif { opacity: .28; }
+  .hero-inner { position: relative; }
   .hero .eyebrow {
-    font-family: var(--f-mono);
-    font-size: 12.5px;
-    letter-spacing: 0.06em;
-    color: var(--gold);
-    margin-bottom: 22px;
+    font-family: var(--f-mono); font-size: 12.5px; letter-spacing: 0.08em;
+    color: var(--gold-ink); margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
   }
+  .hero .eyebrow::before { content: ""; width: 20px; height: 1px; background: var(--gold); display: inline-block; }
   h1 {
-    font-family: var(--f-display);
-    font-weight: 500;
-    font-style: italic;
-    font-size: clamp(2.3rem, 6vw, 3.6rem);
-    line-height: 1.08;
-    letter-spacing: -0.015em;
-    margin: 0 0 26px;
-    text-wrap: balance;
-    max-width: 15ch;
+    font-family: var(--f-display); font-weight: 500; font-style: italic;
+    font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: 1.04; letter-spacing: -0.02em;
+    margin: 0 0 28px; text-wrap: balance; max-width: 15ch;
   }
-  .hero p.lede {
-    font-size: clamp(1.05rem, 2vw, 1.2rem);
-    color: var(--ink-soft);
-    max-width: 52ch;
-    margin: 0;
+  .hero p.lede { font-size: clamp(1.05rem, 2vw, 1.22rem); color: var(--ink-soft); max-width: 54ch; margin: 0 0 34px; }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 22px; border-radius: 4px; font-weight: 600; font-size: 14.5px;
+    text-decoration: none; transition: transform .2s ease, box-shadow .2s ease;
   }
+  .btn.primary { background: var(--ink); color: var(--paper); box-shadow: var(--shadow); }
+  .btn.primary:hover { transform: translateY(-1px); }
+  .btn.ghost { color: var(--ink); border-bottom: 1px solid var(--rule); border-radius: 0; padding: 13px 2px; }
+  .btn.ghost:hover { border-color: var(--ink); }
 
-  section { padding-block: 64px; border-bottom: 1px solid var(--rule); }
+  /* ---- reveal ---- */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+  section { padding-block: 68px; border-bottom: 1px solid var(--rule); }
   section:last-of-type { border-bottom: none; }
-  .kicker {
-    font-family: var(--f-mono);
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    margin-bottom: 16px;
-  }
-  h2 {
-    font-family: var(--f-display);
-    font-weight: 500;
-    font-size: clamp(1.5rem, 3vw, 1.9rem);
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-    margin: 0 0 20px;
-    text-wrap: balance;
-  }
+  .kicker { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  .kicker .n { color: var(--gold-ink); }
+  h2 { font-family: var(--f-display); font-weight: 500; font-size: clamp(1.6rem, 3.2vw, 2.1rem); line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 22px; text-wrap: balance; }
 
-  /* practice list */
+  /* ---- practice: hover-expand cards ---- */
   .practices {
-    display: flex;
-    flex-direction: column;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+    background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden;
   }
+  @media (max-width: 640px) { .practices { grid-template-columns: 1fr; } }
   .practice {
-    display: grid;
-    grid-template-columns: minmax(140px, 200px) 1fr;
-    gap: 28px;
-    padding-block: 30px;
-    border-top: 1px solid var(--rule-soft);
+    background: var(--surface); padding: 30px 28px;
+    display: flex; flex-direction: column; gap: 12px;
+    transition: background .25s ease;
   }
-  .practice:first-child { border-top: none; padding-top: 6px; }
-  .practice .name {
-    font-family: var(--f-display);
-    font-weight: 500;
-    font-size: 1.25rem;
-    color: var(--ink);
-    line-height: 1.3;
-  }
-  .practice .desc { color: var(--ink-soft); max-width: 56ch; }
-  .practice .desc p + p { margin-top: 0.8em; }
+  .practice:hover { background: var(--surface-2); }
+  .practice .num { font-family: var(--f-mono); font-size: 12px; color: var(--gold-ink); }
+  .practice .name { font-family: var(--f-display); font-weight: 500; font-size: 1.35rem; color: var(--ink); line-height: 1.25; }
+  .practice .desc { color: var(--ink-soft); max-width: 42ch; font-size: 15px; }
 
-  @media (max-width: 620px) {
-    .practice { grid-template-columns: 1fr; gap: 10px; }
+  /* ---- pull quote ---- */
+  .quote-wrap { position: relative; padding: 8px 0 8px 44px; }
+  .quote-wrap::before {
+    content: "\201C"; position: absolute; left: -4px; top: -28px;
+    font-family: var(--f-display); font-size: 7rem; color: var(--gold); opacity: .35; line-height: 1;
   }
-
-  .philosophy {
-    background: var(--surface);
-    border: 1px solid var(--rule);
-    padding: 36px 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+  blockquote.pull {
+    margin: 0; font-family: var(--f-display); font-style: italic; font-weight: 500;
+    font-size: clamp(1.4rem, 3.4vw, 2.1rem); line-height: 1.4; color: var(--ink); text-wrap: balance;
   }
-  .philosophy blockquote {
-    margin: 0;
-    font-family: var(--f-display);
-    font-style: italic;
-    font-weight: 500;
-    font-size: clamp(1.2rem, 2.6vw, 1.5rem);
-    line-height: 1.45;
-    color: var(--ink);
-    text-wrap: balance;
-  }
-  .philosophy cite {
-    display: block;
-    font-style: normal;
-    font-family: var(--f-mono);
-    font-size: 12.5px;
-    color: var(--ink-faint);
-    margin-top: 14px;
-  }
+  .quote-wrap cite { display: block; font-style: normal; font-family: var(--f-mono); font-size: 12.5px; color: var(--ink-faint); margin-top: 20px; }
 
   .context p { max-width: 62ch; color: var(--ink-soft); }
   .context p + p { margin-top: 1em; }
   .context strong { color: var(--ink); font-weight: 600; }
 
-  .contact-block {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
+  .contact-block { display: flex; flex-direction: column; gap: 20px; }
   .contact-block p { max-width: 52ch; color: var(--ink-soft); }
-  .contact-row {
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    flex-wrap: wrap;
+  .contact-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .contact-row a.big {
+    font-family: var(--f-mono); font-size: 1.1rem; color: var(--ink);
+    background: var(--gold-dim); padding: 14px 22px; border-radius: 5px;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+    transition: background .2s ease, transform .2s ease; box-shadow: var(--shadow);
   }
-  .contact-row a {
-    font-family: var(--f-mono);
-    font-size: 1.05rem;
-    color: var(--ink);
-    background: var(--gold-dim);
-    padding: 10px 16px;
-    border-radius: 3px;
-    text-decoration: none;
-  }
-  .contact-row a:hover { background: var(--pine-dim); color: var(--pine); }
+  .contact-row a.big:hover { background: var(--pine-dim); color: var(--pine); transform: translateY(-1px); }
 
   footer {
-    padding-block: 36px 56px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    font-size: 13px;
-    color: var(--ink-faint);
+    padding-block: 44px 56px; display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--ink-faint);
   }
+  footer .fmark { font-family: var(--f-display); font-style: italic; color: var(--ink-soft); }
 
   @media (max-width: 520px) {
-    .hero { padding-block: 56px 44px; }
-    section { padding-block: 44px; }
-    .philosophy { padding: 26px 22px; }
+    .hero { padding-block: 76px 52px; }
+    section { padding-block: 48px; }
+    .practice { padding: 24px 22px; }
   }
 </style>
 </head>
 <body>
+<div class="progress" id="progress"></div>
+
+<header class="masthead" id="masthead">
+  <div class="wordmark">Small Tech LLC</div>
+  <nav class="top" aria-label="Primary">
+    <a href="#practice">Practice</a>
+    <a href="#philosophy">Approach</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
 <div class="wrap">
 
-  <header class="masthead">
-    <div class="wordmark">Small Tech LLC</div>
-    <nav class="top" aria-label="Primary">
-      <a href="#practice">Practice</a>
-      <a href="#philosophy">Approach</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
   <section class="hero">
-    <div class="eyebrow">Paolo Bonaccorsi &middot; Small Tech LLC</div>
-    <h1>Taste is a technical skill.</h1>
-    <p class="lede">Small Tech LLC is a one-person practice across four disciplines that don't usually share a business card &mdash; artist development, AI training, personal finance, and creative direction. The connecting thread is the same in all four: finding the signal in a lot of noise, then building the thing that makes it obvious to everyone else.</p>
+    <svg class="hero-motif" viewBox="0 0 400 400" aria-hidden="true">
+      <circle cx="320" cy="80" r="140" fill="none" stroke="var(--gold)" stroke-width="1"/>
+      <circle cx="320" cy="80" r="100" fill="none" stroke="var(--pine)" stroke-width="1"/>
+      <circle cx="320" cy="80" r="60" fill="none" stroke="var(--gold)" stroke-width="1"/>
+      <path d="M60 340 Q 160 220 320 260" fill="none" stroke="var(--gold)" stroke-width="1"/>
+    </svg>
+    <div class="hero-inner reveal in">
+      <div class="eyebrow">Paolo Bonaccorsi &middot; Small Tech LLC</div>
+      <h1>Taste is a technical skill.</h1>
+      <p class="lede">A one-person practice across four disciplines that don't usually share a business card &mdash; artist development, AI training, personal finance, and creative direction. The connecting thread is the same in all four: finding the signal in a lot of noise, then building the thing that makes it obvious to everyone else.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#practice">See the practice</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
   </section>
 
   <section id="practice">
-    <div class="kicker">Practice</div>
-    <h2>Four disciplines, one point of view</h2>
-    <div class="practices">
+    <div class="kicker"><span class="n">01</span> Practice</div>
+    <h2 class="reveal">Four disciplines, one point of view</h2>
+    <div class="practices reveal">
       <div class="practice">
-        <div class="name">A&amp;R</div>
-        <div class="desc">
-          <p>Finding artists and songs before the rest of the room does, and telling the truth about what's working and what isn't. Development, not just discovery &mdash; sequencing a catalog, shaping a release, knowing when a song is finished versus when it's just done.</p>
-        </div>
+        <div class="num">A&amp;R</div>
+        <div class="name">Finding it before the room does</div>
+        <div class="desc">Artist and song development &mdash; not just discovery. Sequencing a catalog, shaping a release, knowing when a song is finished versus when it's just done.</div>
       </div>
       <div class="practice">
-        <div class="name">AI Training</div>
-        <div class="desc">
-          <p>Teaching people who are skeptical or overwhelmed how to actually use AI tools &mdash; not the hype version, the working version. Hands-on, plain-language, built for people who've never opened a terminal and don't need to.</p>
-        </div>
+        <div class="num">AI Training</div>
+        <div class="name">The working version, not the hype version</div>
+        <div class="desc">Teaching people who are skeptical or overwhelmed how to actually use AI tools &mdash; hands-on, plain-language, built for people who've never opened a terminal.</div>
       </div>
       <div class="practice">
-        <div class="name">Personal Finance</div>
-        <div class="desc">
-          <p>Blunt, specific, numbers-on-the-table money coaching. No vague budgeting advice &mdash; a real look at where the money's going and what to do about it, delivered straight, without judgment attached to the honesty.</p>
-        </div>
+        <div class="num">Personal Finance</div>
+        <div class="name">Numbers on the table</div>
+        <div class="desc">Blunt, specific money coaching. A real look at where it's going and what to do about it, delivered straight, without judgment attached to the honesty.</div>
       </div>
       <div class="practice">
-        <div class="name">Creative Direction</div>
-        <div class="desc">
-          <p>Shaping how a project looks, sounds, and reads before it goes out into the world &mdash; brand, visual identity, the whole first impression. The same signal-finding instinct applied to how something presents itself, not just what it is.</p>
-        </div>
+        <div class="num">Creative Direction</div>
+        <div class="name">The whole first impression</div>
+        <div class="desc">Shaping how a project looks, sounds, and reads before it goes out into the world &mdash; the same signal-finding instinct applied to presentation, not just substance.</div>
       </div>
     </div>
   </section>
 
   <section id="philosophy">
-    <div class="kicker">Approach</div>
-    <div class="philosophy">
-      <blockquote>&ldquo;The job isn't to add more. It's to find what's already true and get out of its way.&rdquo;</blockquote>
-      <cite>— on how these four practices actually connect</cite>
+    <div class="kicker"><span class="n">02</span> Approach</div>
+    <div class="quote-wrap reveal">
+      <blockquote class="pull">The job isn't to add more. It's to find what's already true and get out of its way.</blockquote>
+      <cite>&mdash; on how these four practices actually connect</cite>
     </div>
   </section>
 
   <section class="context">
-    <div class="kicker">Background</div>
-    <h2>Where this comes from</h2>
-    <p>Small Tech LLC grew out of work that never fit one job title &mdash; program management on AI evaluation teams, clinical research on wearable health data, and years of finding the through-line in projects other people found confusing. <strong>Finding signal</strong> &mdash; helping people clarify what they actually want and how to get there &mdash; is the skill underneath all four practices above.</p>
-    <p>Based in Fremont, CA.</p>
+    <div class="kicker"><span class="n">03</span> Background</div>
+    <h2 class="reveal">Where this comes from</h2>
+    <p class="reveal">Small Tech LLC grew out of work that never fit one job title &mdash; program management on AI evaluation teams, clinical research on wearable health data, and years of finding the through-line in projects other people found confusing. <strong>Finding signal</strong> &mdash; helping people clarify what they actually want and how to get there &mdash; is the skill underneath all four practices above.</p>
+    <p class="reveal">Based in Fremont, CA, at the intersection of music and tech.</p>
   </section>
 
   <section id="contact">
-    <div class="kicker">Contact</div>
-    <h2>Start a conversation</h2>
-    <div class="contact-block">
+    <div class="kicker"><span class="n">04</span> Contact</div>
+    <h2 class="reveal">Start a conversation</h2>
+    <div class="contact-block reveal">
       <p>Whichever of the four this is about, the first step is the same: say what you're working on and what's not working about it.</p>
       <div class="contact-row">
-        <a href="mailto:hello@smalltech.llc">hello@smalltech.llc</a>
+        <a class="big" href="mailto:hello@smalltech.llc">hello@smalltech.llc</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <div>Small Tech LLC</div>
+    <div class="fmark">Small Tech LLC</div>
     <div>&copy; 2026</div>
   </footer>
 
 </div>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var header = document.getElementById('masthead');
+  var progress = document.getElementById('progress');
+
+  function onScroll(){
+    var y = window.scrollY || document.documentElement.scrollTop;
+    header.classList.toggle('scrolled', y > 8);
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (h > 0 ? Math.min(100, (y / h) * 100) : 0) + '%';
+  }
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (!reduced && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
 </body>
 </html>
