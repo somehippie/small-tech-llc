@@ -115,7 +115,8 @@
     background-image: url("assets/pavilion.jpg");
     background-size: cover;
     background-position: 62% 45%;
-    opacity: .17;
+    filter: brightness(1.12) saturate(.88);
+    opacity: .46;
     pointer-events: none;
   }
   .hero-photo::after {
@@ -124,19 +125,19 @@
     background:
       linear-gradient(102deg,
         var(--paper) 0%,
-        var(--paper) 26%,
-        color-mix(in srgb, var(--paper) 66%, transparent) 48%,
-        color-mix(in srgb, var(--paper) 22%, transparent) 74%,
-        color-mix(in srgb, var(--paper) 46%, transparent) 100%),
+        var(--paper) 17%,
+        color-mix(in srgb, var(--paper) 48%, transparent) 41%,
+        color-mix(in srgb, var(--paper) 8%, transparent) 70%,
+        color-mix(in srgb, var(--paper) 28%, transparent) 100%),
       linear-gradient(to bottom,
         color-mix(in srgb, var(--paper) 30%, transparent) 0%,
         transparent 38%,
         var(--paper) 100%);
   }
-  @media (prefers-color-scheme: dark) { .hero-photo { opacity: .11; } }
-  :root[data-theme="dark"] .hero-photo { opacity: .11; }
-  :root[data-theme="light"] .hero-photo { opacity: .17; }
-  @media (max-width: 720px) { .hero-photo { opacity: .12; background-position: 70% 40%; } }
+  @media (prefers-color-scheme: dark) { .hero-photo { opacity: .26; } }
+  :root[data-theme="dark"] .hero-photo { opacity: .26; }
+  :root[data-theme="light"] .hero-photo { opacity: .46; }
+  @media (max-width: 720px) { .hero-photo { opacity: .34; background-position: 70% 40%; } }
   .hero-motif {
     position: absolute; inset: -20% -10% auto auto; width: 62%; aspect-ratio: 1;
     opacity: .32; pointer-events: none;
