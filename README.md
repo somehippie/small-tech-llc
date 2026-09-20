@@ -17,8 +17,7 @@ both light and dark modes.
 
 ## Stack
 
-No build step, no dependencies, no framework. One HTML file with inline CSS and
-JavaScript, plus one image.
+No build step, no dependencies, no framework. Flat files served as-is.
 
 | | |
 |---|---|
@@ -29,7 +28,10 @@ JavaScript, plus one image.
 ## Structure
 
 ```
-index.html           entire site: markup, styles, scripts
+index.html           markup and copy
+styles.css           all styling, including the theme tokens
+site.js              scroll reveals, progress bar, nav behaviour
+LICENSE              MIT, scoped to styles.css and site.js only
 assets/pavilion.jpg  hero photograph (1200x1200, 249 KB)
 ```
 
@@ -60,7 +62,17 @@ under off-white text.
 
 ## Rights
 
-Copyright Paolo Bonaccorsi. All rights reserved.
+Licensing is split by file.
+
+| | |
+|---|---|
+| `styles.css`, `site.js` | **MIT License.** See [LICENSE](LICENSE). Reuse freely. |
+| `index.html` | All rights reserved, Paolo Bonaccorsi. |
+| `assets/pavilion.jpg` | All rights reserved, Paolo Bonaccorsi. |
+
+`index.html` stays reserved even though it links to the two MIT files. It is
+markup interleaved with copy, and the two are not cleanly separable, so it does
+not carry the MIT label.
 
 This repository is public so the site can be served by GitHub Pages. That is not
-an invitation to reuse the design, copy or photography.
+an invitation to reuse the copy or the photography.
