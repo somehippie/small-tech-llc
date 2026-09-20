@@ -199,6 +199,7 @@
     flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--ink-faint);
   }
   footer .fmark { font-family: var(--f-display); font-style: italic; color: var(--ink-soft); }
+  footer .entity { font-family: var(--f-mono); font-size: 12px; letter-spacing: .01em; }
 
   @media (max-width: 520px) {
     .hero { padding-block: 76px 52px; }
