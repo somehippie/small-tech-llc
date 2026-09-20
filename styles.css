@@ -179,18 +179,7 @@
   .practice .desc { color: var(--ink-soft); max-width: 42ch; font-size: 15px; }
 
   /* ---- pull quote ---- */
-  .quote-wrap { position: relative; padding: 8px 0 8px 44px; }
-  .quote-wrap::before {
-    content: "\201C"; position: absolute; left: -4px; top: -28px;
-    font-family: var(--f-display); font-size: 7rem; color: var(--pine); opacity: .35; line-height: 1;
-  }
-  blockquote.pull {
-    margin: 0; font-family: var(--f-display); font-style: italic; font-weight: 500;
-    font-size: clamp(1.4rem, 3.4vw, 2.1rem); line-height: 1.4; color: var(--ink); text-wrap: balance;
-  }
-  .quote-wrap cite { display: block; font-style: normal; font-family: var(--f-mono); font-size: 12.5px; color: var(--ink-faint); margin-top: 20px; }
-
-  .context p { max-width: 62ch; color: var(--ink-soft); }
+  .context p, #philosophy p { max-width: 62ch; color: var(--ink-soft); }
   .context p + p { margin-top: 1em; }
   .context strong { color: var(--ink); font-weight: 600; }
 
