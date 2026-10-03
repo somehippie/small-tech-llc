@@ -7,13 +7,18 @@ personal finance and creative direction.
 
 ## About
 
-A single-page static site. The design follows the neo-grotesque convention of
-contemporary architecture practices: Archivo set tight for display, Inter for
-body text, a near-monochrome blue-grey palette with pine as the only accent.
+A single-page static site built on the "st" flavor of Paolo Bonaccorsi's design
+system. The character comes from a mixing desk: a grey faceplate, colour-coded
+channel knobs, engraved labels. One typeface, Archivo, does all the work, and
+its width axis is the voice: expanded for headlines, condensed for labels and
+buttons. Pine is the only accent.
+
+The four practices sit in a ChannelStrip, laid out like channels on a desk, one
+soloed at a time. Each practice keeps its own channel colour. The solo bar
+sliding in when you pick a channel is the only motion on the page.
 
 The hero photograph is a perforated parametric pavilion, shot by Paolo
-Bonaccorsi, sitting behind a theme-aware scrim so the headline keeps contrast in
-both light and dark modes.
+Bonaccorsi, shown in a framed panel beside the headline.
 
 ## Stack
 
@@ -21,16 +26,19 @@ No build step, no dependencies, no framework. Flat files served as-is.
 
 | | |
 |---|---|
-| Fonts | Archivo, Inter, JetBrains Mono, via Google Fonts |
+| Fonts | Archivo with the width axis, via Google Fonts |
 | Hosting | GitHub Pages, deployed from `main` at root |
-| Theming | CSS custom properties, light and dark, following the system preference |
+| Theming | Design system tokens (`design/`), light and dark, following the system preference |
 
 ## Structure
 
 ```
 index.html           markup and copy
-styles.css           all styling, including the theme tokens
-site.js              scroll reveals, progress bar, nav behaviour
+design/tokens.css    design system tokens and type classes
+design/components.css  st flavor roles, buttons, ChannelStrip
+design/components/ChannelStrip/  component notes and example
+styles.css           page layout only, no colours or fonts
+site.js              ChannelStrip solo toggle
 LICENSE              MIT, scoped to styles.css and site.js only
 assets/pavilion.jpg  hero photograph (1200x1200, 249 KB)
 ```

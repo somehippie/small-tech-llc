@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../../components.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<style>body{margin:0}.wrap{padding:24px}</style>
+<div data-flavor="st" class="wrap">
+  <div class="channels" role="group" aria-label="Practices">
+    <button class="channel ch-ar" aria-pressed="true"><span class="head"><span class="knob"></span><span class="name">A&amp;R</span></span>
+      <span class="title">Finding it before the room does</span>
+      <span class="desc">Artist and song development, not just discovery.</span></button>
+    <button class="channel ch-ai" aria-pressed="false"><span class="head"><span class="knob"></span><span class="name">AI training</span></span>
+      <span class="title">The working version, not the hype version</span>
+      <span class="desc">Plain-language AI for people who have never opened a terminal.</span></button>
+    <button class="channel ch-fin" aria-pressed="false"><span class="head"><span class="knob"></span><span class="name">Personal finance</span></span>
+      <span class="title">Numbers on the table</span>
+      <span class="desc">Blunt, specific money coaching, without judgment attached.</span></button>
+    <button class="channel ch-cd" aria-pressed="false"><span class="head"><span class="knob"></span><span class="name">Creative direction</span></span>
+      <span class="title">The whole first impression</span>
+      <span class="desc">How a project looks, sounds and reads before it goes out.</span></button>
+  </div>
+</div>
+<script>
+document.querySelectorAll('.channel').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.channel').forEach(o=>o.setAttribute('aria-pressed',o===b?'true':'false'));
+}));
+</script>

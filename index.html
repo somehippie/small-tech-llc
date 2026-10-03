@@ -10,100 +10,93 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="design/tokens.css">
+<link rel="stylesheet" href="design/components.css">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<div class="progress" id="progress"></div>
+<body data-flavor="st">
 
-<header class="masthead" id="masthead">
-  <div class="wordmark">Small Tech LLC</div>
-  <nav class="top" aria-label="Primary">
+<header class="wrap">
+  <div class="masthead">
+  <div class="wordmark st-h3">Small Tech LLC</div>
+  <nav class="top st-label" aria-label="Primary">
     <a href="#practice">Practice</a>
     <a href="#philosophy">Approach</a>
     <a href="#contact">Contact</a>
   </nav>
+  </div>
 </header>
 
-<div class="wrap">
+<main class="wrap">
 
   <section class="hero">
-    <div class="hero-photo" aria-hidden="true"></div>
-    <svg class="hero-motif" viewBox="0 0 400 400" aria-hidden="true">
-      <circle cx="320" cy="80" r="140" fill="none" stroke="var(--pine)" stroke-width="1"/>
-      <circle cx="320" cy="80" r="100" fill="none" stroke="var(--pine)" stroke-width="1"/>
-      <circle cx="320" cy="80" r="60" fill="none" stroke="var(--pine)" stroke-width="1"/>
-      <path d="M60 340 Q 160 220 320 260" fill="none" stroke="var(--pine)" stroke-width="1"/>
-    </svg>
-    <div class="hero-inner reveal in">
-      <div class="eyebrow">Paolo Bonaccorsi &middot; Small Tech LLC</div>
-      <h1>Taste is a technical skill.</h1>
-      <p class="lede">A practice across four disciplines that don't usually share a business card &mdash; artist development, AI training, personal finance, and creative direction. The common thread: separating signal from noise, and being intentful with our direction.</p>
+    <div class="hero-text">
+      <p class="byline st-label">Paolo Bonaccorsi &middot; Small Tech LLC</p>
+      <h1 class="st-display">Taste is a technical skill.</h1>
+      <p class="lede st-body">A practice across four disciplines that don't usually share a business card &mdash; artist development, AI training, personal finance, and creative direction. The common thread: separating signal from noise, and being intentful with our direction.</p>
       <div class="hero-cta">
-        <a class="btn primary" href="#practice">See the practice</a>
-        <a class="btn ghost" href="#contact">Get in touch</a>
+        <a class="btn btn-primary" href="#practice">See the practice</a>
+        <a class="btn btn-secondary" href="#contact">Get in touch</a>
       </div>
     </div>
+    <img class="hero-photo" src="assets/pavilion.jpg" width="1200" height="1200" alt="">
   </section>
 
   <section id="practice">
-    <div class="kicker"><span class="n">01</span> Practice</div>
-    <h2 class="reveal">Four disciplines, one point of view</h2>
-    <div class="practices reveal">
-      <div class="practice">
-        <div class="num">A&amp;R</div>
-        <div class="name">Finding it before the room does</div>
-        <div class="desc">Artist and song development, not just discovery. Sequencing a catalog, shaping a release, knowing when a song is finished versus when it's just done.</div>
-      </div>
-      <div class="practice">
-        <div class="num">AI Training</div>
-        <div class="name">The working version, not the hype version</div>
-        <div class="desc">Teaching people who are skeptical or overwhelmed how to actually use AI tools. Hands-on, plain-language, built for people who've never opened a terminal.</div>
-      </div>
-      <div class="practice">
-        <div class="num">Personal Finance</div>
-        <div class="name">Numbers on the table</div>
-        <div class="desc">Blunt, specific money coaching. A real look at where it's going and what to do about it, delivered straight, without judgment attached to the honesty.</div>
-      </div>
-      <div class="practice">
-        <div class="num">Creative Direction</div>
-        <div class="name">The whole first impression</div>
-        <div class="desc">Shaping how a project looks, sounds, and reads before it goes out into the world. The same signal-finding instinct applied to presentation, not just substance.</div>
-      </div>
+    <h2 class="st-h2">Four disciplines, one point of view</h2>
+    <div class="channels" role="group" aria-label="Practices">
+      <button type="button" class="channel ch-ar" aria-pressed="true">
+        <span class="head"><span class="knob"></span><span class="name">A&amp;R</span></span>
+        <span class="title">Finding it before the room does</span>
+        <span class="desc">Artist and song development, not just discovery. Sequencing a catalog, shaping a release, knowing when a song is finished versus when it's just done.</span>
+      </button>
+      <button type="button" class="channel ch-ai" aria-pressed="false">
+        <span class="head"><span class="knob"></span><span class="name">AI training</span></span>
+        <span class="title">The working version, not the hype version</span>
+        <span class="desc">Teaching people who are skeptical or overwhelmed how to actually use AI tools. Hands-on, plain-language, built for people who've never opened a terminal.</span>
+      </button>
+      <button type="button" class="channel ch-fin" aria-pressed="false">
+        <span class="head"><span class="knob"></span><span class="name">Personal finance</span></span>
+        <span class="title">Numbers on the table</span>
+        <span class="desc">Blunt, specific money coaching. A real look at where it's going and what to do about it, delivered straight, without judgment attached to the honesty.</span>
+      </button>
+      <button type="button" class="channel ch-cd" aria-pressed="false">
+        <span class="head"><span class="knob"></span><span class="name">Creative direction</span></span>
+        <span class="title">The whole first impression</span>
+        <span class="desc">Shaping how a project looks, sounds, and reads before it goes out into the world. The same signal-finding instinct applied to presentation, not just substance.</span>
+      </button>
     </div>
   </section>
 
   <section id="philosophy">
-    <div class="kicker"><span class="n">02</span> Approach</div>
-    <h2 class="reveal">How these four practices connect</h2>
-    <p class="reveal">The job isn't to add more. It's to find what's already true and get out of its way.</p>
+    <h2 class="st-h2">How these four practices connect</h2>
+    <p class="st-body">The job isn't to add more. It's to find what's already true and get out of its way.</p>
   </section>
 
-  <section class="context">
-    <div class="kicker"><span class="n">03</span> Background</div>
-    <h2 class="reveal">Where this comes from</h2>
-    <p class="reveal">Small Tech LLC grew out of work that never fit one job title: program management on AI evaluation teams, clinical research on wearable health data, and years of finding the through-line in projects other people found confusing. <strong>Finding signal</strong>, helping people clarify what they actually want and how to get there, is the skill underneath all four practices above.</p>
-    <p class="reveal">Based in Fremont, CA, at the intersection of music and tech.</p>
+  <section id="background">
+    <h2 class="st-h2">Where this comes from</h2>
+    <p class="st-body">Small Tech LLC grew out of work that never fit one job title: program management on AI evaluation teams, clinical research on wearable health data, and years of finding the through-line in projects other people found confusing. <strong>Finding signal</strong>, helping people clarify what they actually want and how to get there, is the skill underneath all four practices above.</p>
+    <p class="st-body">Based in Fremont, CA, at the intersection of music and tech.</p>
   </section>
 
   <section id="contact">
-    <div class="kicker"><span class="n">04</span> Contact</div>
-    <h2 class="reveal">Start a conversation</h2>
-    <div class="contact-block reveal">
-      <p>Whichever of the four this is about, the first step is the same: say what you're working on and what's not working about it.</p>
-      <div class="contact-row">
-        <a class="big" href="mailto:pbonaccorsi@gmail.com">pbonaccorsi@gmail.com</a>
-      </div>
+    <h2 class="st-h2">Start a conversation</h2>
+    <div class="contact-panel">
+      <p class="st-body">Whichever of the four this is about, the first step is the same: say what you're working on and what's not working about it.</p>
+      <a class="btn btn-primary" href="mailto:pbonaccorsi@gmail.com">pbonaccorsi@gmail.com</a>
     </div>
   </section>
 
-  <footer>
-    <div class="fmark">Small Tech LLC</div>
-    <div class="entity">California LLC &middot; B20250439627 &middot; Formed 2026</div>
-    <div>&copy; 2026</div>
-  </footer>
+</main>
 
-</div>
+<footer class="wrap">
+  <div class="footer">
+  <div class="fmark st-label">Small Tech LLC</div>
+  <div class="st-small">California LLC &middot; B20250439627 &middot; Formed 2026</div>
+  <div class="st-small">&copy; 2026</div>
+  </div>
+</footer>
 
 <script src="site.js"></script>
 </body>
