@@ -20,6 +20,11 @@ sliding in when you pick a channel is the only motion on the page.
 The hero photograph is a perforated parametric pavilion, shot by Paolo
 Bonaccorsi, shown in a framed panel beside the headline.
 
+The Artifacts section links to plain-language guides hosted on claude.ai. Each
+card states the date its facts were last checked, so when a guide is revised,
+update that date here too. A card tied to one of the four practices carries that
+practice's channel colour as a small knob; anything else gets a plain label.
+
 ## Stack
 
 No build step, no dependencies, no framework. Flat files served as-is.
