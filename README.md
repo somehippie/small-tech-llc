@@ -17,8 +17,7 @@ The four practices sit in a ChannelStrip, laid out like channels on a desk, one
 soloed at a time. Each practice keeps its own channel colour. The solo bar
 sliding in when you pick a channel is the only motion on the page.
 
-The hero photograph is The Orb, the perforated pavilion on Google's Mountain
-View campus, shot by Paolo
+The hero photograph is The Orb, a perforated pavilion, shot by Paolo
 Bonaccorsi, shown in a framed panel beside the headline with its credit as a
 caption. Below the hero, every section shares one grid: the heading in a
 narrower left column, the content in the right. Artifacts are ruled entries
