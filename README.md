@@ -36,7 +36,7 @@ No build step, no dependencies, no framework. Flat files served as-is.
 |---|---|
 | Fonts | Archivo with the width axis, via Google Fonts |
 | Hosting | GitHub Pages, deployed from `main` at root |
-| Theming | Design system tokens (`design/`), light and dark, following the system preference |
+| Theming | Design system tokens (`design/`), light and dark, following the system preference; a switch in the masthead overrides it, remembered in `localStorage` |
 
 ## Structure
 
@@ -46,7 +46,7 @@ design/tokens.css    design system tokens and type classes
 design/components.css  st flavor roles, buttons, ChannelStrip
 design/components/ChannelStrip/  component notes and example
 styles.css           page layout only, no colours or fonts
-site.js              ChannelStrip solo toggle
+site.js              ChannelStrip solo toggle and the theme switch
 LICENSE              MIT, scoped to styles.css and site.js only
 assets/pavilion.jpg  hero photograph (1200x1200, 249 KB)
 ```

@@ -24,6 +24,11 @@ strong { font-weight: 600; }
 nav.top { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); }
 nav.top a { color: var(--ink-soft); text-decoration: none; padding-block: var(--space-1); }
 nav.top a:hover { color: var(--ink); text-decoration: underline; }
+.theme-toggle {
+  font-family: inherit; color: var(--ink-soft); background: none; border: 1px solid var(--rule); border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-3); cursor: pointer;
+}
+.theme-toggle:hover { color: var(--ink); border-color: var(--ink-faint); }
 
 /* ---- hero ---- */
 .hero { display: grid; gap: var(--space-8); padding-block: var(--space-12) var(--space-12); border-bottom: 1px solid var(--rule); }
