@@ -18,7 +18,10 @@ soloed at a time. Each practice keeps its own channel colour. The solo bar
 sliding in when you pick a channel is the only motion on the page.
 
 The hero photograph is a perforated parametric pavilion, shot by Paolo
-Bonaccorsi, shown in a framed panel beside the headline.
+Bonaccorsi, shown in a framed panel beside the headline with its credit as a
+caption. Below the hero, every section shares one grid: the heading in a
+narrower left column, the content in the right. Artifacts are ruled entries
+in that grid rather than boxed cards.
 
 The Artifacts section links to plain-language guides hosted on claude.ai. Each
 card states the date its facts were last checked, so when a guide is revised,
