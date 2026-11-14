@@ -55,6 +55,16 @@ section .flow > * + * { margin-top: var(--space-4); }
 /* pull quote in the background section: the thesis, set in the heading column */
 .thesis { max-width: 22ch; text-wrap: balance; }
 
+/* ---- buses: the strip is split into direction and coaching ---- */
+.buses { display: grid; gap: var(--space-8); }
+.bus { display: flex; flex-direction: column; gap: var(--space-4); }
+.bus-head { display: flex; flex-direction: column; gap: var(--space-1); padding-bottom: var(--space-3); border-bottom: 1px solid var(--rule); }
+.bus .channels { grid-template-columns: 1fr; }
+@media (min-width: 721px) {
+  .buses { grid-template-columns: 1fr 2fr; gap: var(--space-6); }
+  .bus-coaching .channels, .bus:last-child .channels { grid-template-columns: 1fr 1fr; }
+}
+
 /* ---- channels: the soloed channel reads at full ink ---- */
 .channel[aria-pressed="true"] .desc { color: var(--ink); }
 
