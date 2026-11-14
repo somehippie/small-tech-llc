@@ -85,7 +85,9 @@ section .flow > * + * { margin-top: var(--space-4); }
 .artifact-facts dt { color: var(--ink-faint); }
 .artifact-facts dd { margin: 0; }
 .artifact-foot { padding-top: var(--space-2); }
-.artifacts-note { margin-top: var(--space-6); color: var(--ink-faint); }
+.artifacts-note { margin-top: var(--space-3); color: var(--ink-faint); text-align: right; max-width: none; }
+[data-flavor] .artifacts-note a { color: var(--ink-faint); text-decoration: underline; }
+[data-flavor] .artifacts-note a:hover { color: var(--ink); }
 
 /* ---- contact ---- */
 .contact-body { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-6); }
