@@ -7,7 +7,7 @@ personal finance and creative direction.
 
 ## About
 
-A single-page static site built on the "st" flavor of Paolo Bonaccorsi's design
+A two-page static site built on the "st" flavor of Paolo Bonaccorsi's design
 system. The character comes from a mixing desk: a grey faceplate, colour-coded
 channel knobs, engraved labels. One typeface, Archivo, does all the work, and
 its width axis is the voice: expanded for headlines, condensed for labels and
@@ -28,6 +28,11 @@ card states the date its facts were last checked, so when a guide is revised,
 update that date here too. A card tied to one of the four practices carries that
 practice's channel colour as a small knob; anything else gets a plain label.
 
+The services page, `services.html`, is the full menu: the specific services
+under the two ways of working, direction and coaching. It shares the home page's
+masthead, footer, theme switch and stylesheets. Services are ruled entries like
+the artifacts and follow the same rule: a practice's knob, or a plain label.
+
 ## Stack
 
 No build step, no dependencies, no framework. Flat files served as-is.
@@ -41,7 +46,8 @@ No build step, no dependencies, no framework. Flat files served as-is.
 ## Structure
 
 ```
-index.html           markup and copy
+index.html           home page: markup and copy
+services.html        services page: markup and copy
 design/tokens.css    design system tokens and type classes
 design/components.css  st flavor roles, buttons, ChannelStrip
 design/components/ChannelStrip/  component notes and example
@@ -83,12 +89,12 @@ Licensing is split by file.
 | | |
 |---|---|
 | `styles.css`, `site.js` | **MIT License.** See [LICENSE](LICENSE). Reuse freely. |
-| `index.html` | All rights reserved, Paolo Bonaccorsi. |
+| `index.html`, `services.html` | All rights reserved, Paolo Bonaccorsi. |
 | `assets/pavilion.jpg` | All rights reserved, Paolo Bonaccorsi. |
 
-`index.html` stays reserved even though it links to the two MIT files. It is
-markup interleaved with copy, and the two are not cleanly separable, so it does
-not carry the MIT label.
+`index.html` and `services.html` stay reserved even though they link to the two
+MIT files. They are markup interleaved with copy, and the two are not cleanly
+separable, so they do not carry the MIT label.
 
 This repository is public so the site can be served by GitHub Pages. That is not
 an invitation to reuse the copy or the photography.
