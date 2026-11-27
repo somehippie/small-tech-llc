@@ -100,9 +100,9 @@ section .flow > * + * { margin-top: var(--space-4); }
 .artifact h3, .service h3 { text-wrap: balance; max-width: 24ch; }
 .artifact-body, .service-body { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-4); }
 .artifact-desc, .service-desc { color: var(--ink-soft); }
-.artifact-facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: var(--space-1) var(--space-4); max-width: 52ch; }
-.artifact-facts dt { color: var(--ink-faint); }
-.artifact-facts dd { margin: 0; }
+.artifact-facts, .service-facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: var(--space-1) var(--space-4); max-width: 52ch; }
+.artifact-facts dt, .service-facts dt { color: var(--ink-faint); }
+.artifact-facts dd, .service-facts dd { margin: 0; }
 .artifact-foot { padding-top: var(--space-2); display: flex; flex-wrap: wrap; gap: var(--space-3); }
 .artifacts-note { margin-top: var(--space-3); color: var(--ink-faint); text-align: right; max-width: none; }
 [data-flavor] .artifacts-note a { color: var(--ink-faint); text-decoration: underline; }

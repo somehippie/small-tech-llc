@@ -44,9 +44,10 @@
       "@id": "https://somehippie.github.io/small-tech-llc/services.html#catalog",
       "name": "The full menu",
       "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-ai-consulting", "name": "AI consulting for professionals", "category": "AI Training", "description": "For owners and professionals putting AI to work in their business: find where AI saves real time, then build it into their tools, files and team habits. Monthly engagements, from a standing session to working alongside the team every week.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-operations", "name": "Operations, QA and NPI", "category": "For teams", "description": "Program management for data collection, QA, hardware testing and NPI teams: test plans, defect triage, dogfood and user studies, and trackers people actually read. By the project or the month.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-artist-development", "name": "Artist and creator development", "category": "Creative Direction", "description": "For musicians: shaping a release and finding the pocket, from the song itself to how it's presented. For YouTubers: how to build a theme you can run with.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-web-presence", "name": "Web presence", "category": "Creative Direction", "description": "A portfolio site on GitHub, a Linktree landing page, and LinkedIn and GitHub profiles that point to each other, so the first impression is the one you meant.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-operations", "name": "Operations consulting", "category": "For teams", "description": "For data collection, QA, hardware testing and NPI teams: smoother processes, clearer communication, trackers and visuals people actually read, and a mindset that keeps the team moving.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-file-organization", "name": "File organization and backups", "category": "AI Training", "description": "Using AI to sort years of files into a folder structure and naming system built around how you work, with cleanup and backups included.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-ai-hobby", "name": "AI as a hobby", "category": "AI Training", "description": "For the curious: which tools are worth your time, a first project to build, and where to go once it clicks.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-credit-cards", "name": "Credit card strategy", "category": "Personal Finance", "description": "The card, or combination of cards, that fits how you actually spend. Usually no annual fee and 3-5% cash back per category.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
@@ -100,8 +101,49 @@
         </div>
         <button type="button" class="btn btn-secondary menu-print">Print this menu</button>
       </div>
-      <p class="st-small menu-count" id="menu-count" role="status">11 services</p>
+      <p class="st-small menu-count" id="menu-count" role="status">12 services</p>
       <p class="st-body menu-empty" hidden>Nothing on the menu matches that. <a href="index.html#contact">Ask me anyway</a>.</p>
+    </div>
+  </section>
+
+  <section id="engagements" data-menu-section>
+    <div class="section-intro">
+      <h2 class="st-h2">Engagements</h2>
+      <p class="lede st-body soft">Ongoing work for businesses and teams, by the month or by the project.</p>
+    </div>
+    <div class="section-body">
+      <div class="services">
+        <article class="service" id="svc-ai-consulting" data-practice="ai">
+          <div class="service-head">
+            <p class="service-tag st-label ch-ai"><span class="knob" aria-hidden="true"></span>AI Training</p>
+            <h3 class="st-h3">AI consulting for professionals</h3>
+          </div>
+          <div class="service-body">
+            <p class="st-body service-desc">For owners and professionals putting AI to work in their business. We start with the work you already do, find where AI saves real time, then build it into your tools, your files and your team's habits, with you learning it as we go.</p>
+            <dl class="service-facts st-small">
+              <dt>For</dt><dd>Owners, professionals and their teams</dd>
+              <dt>Format</dt><dd>Monthly, from a standing session to working alongside your team every week</dd>
+              <dt>First step</dt><dd>One working session on a real task from your business</dd>
+            </dl>
+            <a class="ask st-small" href="index.html?about=ai-consulting#contact">Ask about this</a>
+          </div>
+        </article>
+        <article class="service" id="svc-operations" data-practice="teams">
+          <div class="service-head">
+            <p class="service-tag st-label">For teams</p>
+            <h3 class="st-h3">Operations, QA and NPI</h3>
+          </div>
+          <div class="service-body">
+            <p class="st-body service-desc">Program management for data collection, QA, hardware testing and NPI teams: test plans, defect triage from report to fix, dogfood and user studies, trackers and visuals people actually read, and a mindset that keeps the team moving. I've done this work at Google, Apple and Oculus VR, in contract roles placed through staffing agencies.</p>
+            <dl class="service-facts st-small">
+              <dt>For</dt><dd>Hardware, QA, data and AI evaluation teams</dd>
+              <dt>Format</dt><dd>By the project or the month: remote, on site in the Bay Area, or travelling where the work is</dd>
+              <dt>Background</dt><dd>AI evaluation programs and clinical research on wearable health data</dd>
+            </dl>
+            <a class="ask st-small" href="index.html?about=operations#contact">Ask about this</a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -130,16 +172,6 @@
           <div class="service-body">
             <p class="st-body service-desc">A portfolio site on GitHub, a Linktree landing page, and LinkedIn and GitHub profiles that point to each other, so the first impression is the one you meant.</p>
             <a class="ask st-small" href="index.html?about=web-presence#contact">Ask about this</a>
-          </div>
-        </article>
-        <article class="service" id="svc-operations" data-practice="teams">
-          <div class="service-head">
-            <p class="service-tag st-label">For teams</p>
-            <h3 class="st-h3">Operations consulting</h3>
-          </div>
-          <div class="service-body">
-            <p class="st-body service-desc">For data collection, QA, hardware testing and NPI teams: smoother processes, clearer communication, trackers and visuals people actually read, and a mindset that keeps the team moving.</p>
-            <a class="ask st-small" href="index.html?about=operations#contact">Ask about this</a>
           </div>
         </article>
       </div>

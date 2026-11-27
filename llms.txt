@@ -7,13 +7,17 @@ Inquiries go by email to pbonaccorsi@gmail.com: say what you're working on and w
 ## Pages
 
 - [Home](https://somehippie.github.io/small-tech-llc/): the practice, published artifacts, background and the brief
-- [Services](https://somehippie.github.io/small-tech-llc/services.html): the full menu, sorted into direction and coaching
+- [Services](https://somehippie.github.io/small-tech-llc/services.html): the full menu, sorted into engagements, direction and coaching
+
+## Engagements
+
+- [AI consulting for professionals](https://somehippie.github.io/small-tech-llc/services.html#svc-ai-consulting): AI Training. Monthly work with owners and professionals putting AI to work in their business.
+- [Operations, QA and NPI](https://somehippie.github.io/small-tech-llc/services.html#svc-operations): For teams. Program management for data collection, QA, hardware testing and NPI teams, by the project or the month.
 
 ## Direction
 
 - [Artist and creator development](https://somehippie.github.io/small-tech-llc/services.html#svc-artist-development): Creative Direction. Shaping a release and finding the pocket for musicians; a theme you can run with for YouTubers.
 - [Web presence](https://somehippie.github.io/small-tech-llc/services.html#svc-web-presence): Creative Direction. A GitHub portfolio site, a Linktree landing page, and LinkedIn and GitHub profiles that point to each other.
-- [Operations consulting](https://somehippie.github.io/small-tech-llc/services.html#svc-operations): For data collection, QA, hardware testing and NPI teams.
 
 ## Coaching
 
