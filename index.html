@@ -23,11 +23,51 @@
 <link rel="stylesheet" href="design/components.css">
 <link rel="stylesheet" href="styles.css">
 <script>
-/* Theme: follows the system unless the visitor chose one here. Runs before paint to avoid a flash. */
-(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+/* Marks that scripts run, so the interactive parts show from the first paint. Theme: follows the system unless the visitor chose one here. Runs before paint to avoid a flash. */
+(function(){document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://somehippie.github.io/small-tech-llc/#org",
+      "name": "Small Tech LLC",
+      "url": "https://somehippie.github.io/small-tech-llc/",
+      "description": "A practice across creative direction, AI training, and personal finance. The common thread: separating signal from noise.",
+      "email": "pbonaccorsi@gmail.com",
+      "logo": "https://somehippie.github.io/small-tech-llc/apple-touch-icon.png",
+      "image": "https://somehippie.github.io/small-tech-llc/assets/pavilion.jpg",
+      "foundingDate": "2026",
+      "identifier": { "@type": "PropertyValue", "propertyID": "California Secretary of State entity number", "value": "B20250439627" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Fremont", "addressRegion": "CA", "addressCountry": "US" },
+      "areaServed": [ { "@type": "City", "name": "Fremont, California" }, { "@type": "Place", "name": "San Francisco Bay Area" } ],
+      "knowsAbout": [ "Creative direction", "AI training", "Personal finance" ],
+      "founder": { "@id": "https://somehippie.github.io/small-tech-llc/#paolo" },
+      "hasOfferCatalog": { "@id": "https://somehippie.github.io/small-tech-llc/services.html#catalog" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://somehippie.github.io/small-tech-llc/#paolo",
+      "name": "Paolo Bonaccorsi",
+      "jobTitle": "Founder",
+      "worksFor": { "@id": "https://somehippie.github.io/small-tech-llc/#org" },
+      "sameAs": [ "https://github.com/somehippie" ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://somehippie.github.io/small-tech-llc/#site",
+      "url": "https://somehippie.github.io/small-tech-llc/",
+      "name": "Small Tech LLC",
+      "publisher": { "@id": "https://somehippie.github.io/small-tech-llc/#org" }
+    }
+  ]
+}
 </script>
 </head>
 <body data-flavor="st">
+<a class="skip-link st-label" href="#top">Skip to content</a>
 
 <header class="wrap">
   <div class="masthead">
@@ -119,7 +159,7 @@
             <h3 class="st-h3">Monthly Rotation&nbsp;- Music Calendar</h3>
             <figure class="artifact-shot">
               <a class="shot" href="assets/monthly-rotation.png" data-size="2560x1800" data-caption="Monthly Rotation - Music Calendar: the 25'26 record on the turntable, with Midyears 25'26 as its label." data-alt="Monthly Rotation - Music Calendar in its dark theme: the title and a line about the calendar at the left, with May'26 cued and buttons to play it or see the songs; at the right a turntable holding the 25'26 record, twelve grooves coloured from each month's playlist cover around a label photo looking up through The Orb, its tonearm resting on the innermost groove; below, the calendar's newest year begins.">
-                <img src="assets/monthly-rotation-thumb.png" width="832" height="468" loading="lazy" decoding="async" alt="Monthly Rotation - Music Calendar in its dark theme: the title beside a turntable holding the 25'26 record, its twelve grooves coloured from each month's cover around a photo label of The Orb."><span class="visually-hidden"> Opens a larger view.</span>
+                <picture><source srcset="assets/monthly-rotation-thumb.webp" type="image/webp"><img src="assets/monthly-rotation-thumb.png" width="832" height="468" loading="lazy" decoding="async" alt="Monthly Rotation - Music Calendar in its dark theme: the title beside a turntable holding the 25'26 record, its twelve grooves coloured from each month's cover around a photo label of The Orb."></picture><span class="visually-hidden"> Opens a larger view.</span>
               </a>
               <figcaption class="st-small">The 25'26 record, with Midyears on the label.</figcaption>
             </figure>
@@ -143,7 +183,7 @@
             <h3 class="st-h3">Privacy Curtain</h3>
             <figure class="artifact-shot">
               <a class="shot" href="assets/privacy-curtain.png" data-size="2560x1440" data-caption="Privacy Curtain: the screen at 2560 by 1440, with the Bay Area's weather." data-alt="The Privacy Curtain on a 2560 by 1440 screen: the time and date, and beside them the track now playing (a sample one) with its progress line; a radar map of the San Francisco Bay Area with its hills shaded and contoured and no rain on it, temperatures around the Bay, a tide table in one corner and the weather alerts in the other; the message &ldquo;PC in use by Claude&rdquo; beside a close-up of the town's streets; ten-minute CPU and network graphs, memory and disk bars; and the forecast: the conditions now as small symbols (humidity, dew point, wind, sunrise and sunset), the next six hours, and the next three days as small temperature and wind graphs.">
-                <img src="assets/privacy-curtain-thumb.png" width="832" height="468" loading="lazy" decoding="async" alt="The Privacy Curtain on a widescreen monitor: a large clock with the track now playing beside it, a radar map of the San Francisco Bay Area over shaded hills with temperatures and a tide table, and under it the message &ldquo;PC in use by Claude&rdquo; and a close-up of the town's streets on the left; live system stats and the forecast on the right."><span class="visually-hidden"> Opens a larger view.</span>
+                <picture><source srcset="assets/privacy-curtain-thumb.webp" type="image/webp"><img src="assets/privacy-curtain-thumb.png" width="832" height="468" loading="lazy" decoding="async" alt="The Privacy Curtain on a widescreen monitor: a large clock with the track now playing beside it, a radar map of the San Francisco Bay Area over shaded hills with temperatures and a tide table, and under it the message &ldquo;PC in use by Claude&rdquo; and a close-up of the town's streets on the left; live system stats and the forecast on the right."></picture><span class="visually-hidden"> Opens a larger view.</span>
               </a>
               <figcaption class="st-small">Rendered by the curtain's own preview mode, since the real one hides from screenshots.</figcaption>
             </figure>
@@ -166,7 +206,7 @@
             <h3 class="st-h3">Fremont ballot measures, November 2026</h3>
             <figure class="artifact-shot">
               <a class="shot" href="assets/ballot-guide.png" data-size="1920x2560" data-caption="Fremont ballot measures, November 2026: the guide's opening and its first measure card." data-alt="The ballot guide's opening section in navy and gold: the headline &ldquo;15 measures. Both sides.&rdquo;, a note that the election was held November 3, 2026, an index of all 15 measures, and the card for Proposition 1 with what a yes and a no vote do, the cost, and both sides' arguments.">
-                <img src="assets/ballot-guide-thumb.png" width="832" height="468" loading="lazy" decoding="async" alt="The ballot guide's opening: the headline &ldquo;15 measures. Both sides.&rdquo; in gold and white on navy, above a Mission Peak ridgeline."><span class="visually-hidden"> Opens a larger view.</span>
+                <picture><source srcset="assets/ballot-guide-thumb.webp" type="image/webp"><img src="assets/ballot-guide-thumb.png" width="832" height="468" loading="lazy" decoding="async" alt="The ballot guide's opening: the headline &ldquo;15 measures. Both sides.&rdquo; in gold and white on navy, above a Mission Peak ridgeline."></picture><span class="visually-hidden"> Opens a larger view.</span>
               </a>
               <figcaption class="st-small">The opening of the guide, as published.</figcaption>
             </figure>
@@ -205,9 +245,91 @@
       <h2 class="st-h2">Start a conversation</h2>
       <div class="contact-body">
         <p class="st-body">Whichever of the three this is about, the first step is the same: say what you're working on and what's not working about it.</p>
-        <a class="btn btn-primary" href="mailto:pbonaccorsi@gmail.com">Email pbonaccorsi@gmail.com</a>
+        <a class="btn btn-primary contact-email" href="mailto:pbonaccorsi@gmail.com">Email pbonaccorsi@gmail.com</a>
       </div>
     </div>
+
+    <form class="brief st-body" aria-labelledby="brief-title">
+      <div class="brief-fields">
+        <div class="brief-intro">
+          <h3 class="st-h3" id="brief-title">Or fill in a short brief</h3>
+          <p class="st-small soft">It turns into an email you can read before you send it.</p>
+        </div>
+        <fieldset class="group">
+          <legend class="st-label">What's it about?</legend>
+          <div class="chips">
+            <label class="chip st-label ch-cd"><input type="radio" name="practice" value="cd"><span class="knob" aria-hidden="true"></span>Creative Direction</label>
+            <label class="chip st-label ch-ai"><input type="radio" name="practice" value="ai"><span class="knob" aria-hidden="true"></span>AI Training</label>
+            <label class="chip st-label ch-fin"><input type="radio" name="practice" value="fin"><span class="knob" aria-hidden="true"></span>Personal Finance</label>
+            <label class="chip st-label"><input type="radio" name="practice" value="unsure" checked>Not sure yet</label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label class="st-label" for="brief-service">Which part of the menu <span class="faint">(optional)</span></label>
+          <select class="input" id="brief-service" name="service">
+            <option value="">Pick one, or leave it</option>
+            <optgroup label="Creative Direction" data-practice="cd">
+              <option value="artist-development">Artist and creator development</option>
+              <option value="web-presence">Web presence</option>
+            </optgroup>
+            <optgroup label="AI Training" data-practice="ai">
+              <option value="file-organization">File organization and backups</option>
+              <option value="ai-hobby">AI as a hobby</option>
+            </optgroup>
+            <optgroup label="Personal Finance" data-practice="fin">
+              <option value="credit-cards">Credit card strategy</option>
+              <option value="bills">Bills and the cost of living</option>
+              <option value="housing">Housing, jobs and commuting</option>
+              <option value="home-buying">Home-buying math</option>
+            </optgroup>
+            <optgroup label="Everything else" data-practice="">
+              <option value="operations">Operations consulting</option>
+              <option value="hobbies">Hobbies and life coaching</option>
+              <option value="home-garden">Home and garden</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="field">
+          <label class="st-label" for="brief-working">What are you working on?</label>
+          <textarea class="input" id="brief-working" name="working" rows="4" maxlength="500"></textarea>
+        </div>
+        <div class="field">
+          <label class="st-label" for="brief-stuck">What's not working about it?</label>
+          <textarea class="input" id="brief-stuck" name="stuck" rows="4" maxlength="500"></textarea>
+        </div>
+        <fieldset class="group">
+          <legend class="st-label">When would you like to start?</legend>
+          <div class="chips">
+            <label class="chip st-label"><input type="radio" name="when" value="week">This week</label>
+            <label class="chip st-label"><input type="radio" name="when" value="month">This month</label>
+            <label class="chip st-label"><input type="radio" name="when" value="exploring" checked>Just exploring</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="brief-preview" role="group" aria-labelledby="preview-title">
+        <h3 class="st-label" id="preview-title">Your email</h3>
+        <dl class="brief-to st-small"><dt>To</dt><dd>pbonaccorsi@gmail.com</dd></dl>
+        <div class="field">
+          <label class="st-label" for="brief-subject">Subject</label>
+          <input class="input" id="brief-subject" name="subject" type="text" maxlength="120" autocomplete="off">
+        </div>
+        <div class="brief-suggest" hidden>
+          <button type="button" class="btn btn-secondary">Suggest a subject on this device</button>
+          <p class="st-small faint" role="status"></p>
+        </div>
+        <div class="field">
+          <p class="st-label" id="brief-message-label">Message</p>
+          <div class="brief-message st-small" role="region" aria-labelledby="brief-message-label" tabindex="0"></div>
+        </div>
+        <div class="brief-actions">
+          <a class="btn btn-primary brief-send" href="mailto:pbonaccorsi@gmail.com">Open in your email app</a>
+          <button type="button" class="btn btn-secondary brief-copy">Copy the message</button>
+        </div>
+        <p class="st-small faint">Nothing here is sent or saved. It only becomes an email when you send it.</p>
+        <p class="st-small brief-status" role="status"></p>
+      </div>
+    </form>
   </section>
 
 </main>
@@ -216,7 +338,7 @@
   <div class="footer">
     <div class="fmark st-label"><img src="favicon.svg" alt="">Small Tech LLC</div>
     <div class="st-small">California LLC, B20250439627, formed 2026</div>
-    <div class="st-small">&copy; 2026 Paolo Bonaccorsi</div>
+    <div class="st-small">&copy; 2026 Paolo Bonaccorsi &middot; <a href="llms.txt">llms.txt</a></div>
   </div>
 </footer>
 

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- GitHub Pages serves this page for any missing path, at any depth, so relative links resolve from the site root.
+     Change this to "/" if the site moves to its own domain. -->
+<base href="/small-tech-llc/">
+<title>Small Tech LLC: Page not found</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#e4e6e3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141618" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.ico?v=3" sizes="any">
+<link rel="icon" href="favicon.svg?v=3" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="design/tokens.css">
+<link rel="stylesheet" href="design/components.css">
+<link rel="stylesheet" href="styles.css">
+<script>
+/* Marks that scripts run, so the interactive parts show from the first paint. Theme: follows the system unless the visitor chose one here. Runs before paint to avoid a flash. */
+(function(){document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+</script>
+</head>
+<body data-flavor="st">
+<a class="skip-link st-label" href="#top">Skip to content</a>
+
+<header class="wrap">
+  <div class="masthead">
+    <a class="wordmark st-h3" href="index.html"><img src="favicon.svg" alt="">Small Tech LLC</a>
+    <nav class="top st-label" aria-label="Primary">
+      <a href="index.html#practice">Practice</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#artifacts">Artifacts</a>
+      <a href="index.html#background">About</a>
+      <a href="index.html#contact">Contact</a>
+      <button type="button" class="theme-toggle st-label">Dark theme</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <section class="page-intro">
+    <h1 class="st-display">Nothing here.</h1>
+    <p class="lede st-body soft">That page doesn't exist, or it moved. Everything else is still where it was.</p>
+    <div class="lost-links">
+      <a class="btn btn-primary" href="index.html">Go to the home page</a>
+      <a class="btn btn-secondary" href="services.html">See the full menu</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="footer">
+    <div class="fmark st-label"><img src="favicon.svg" alt="">Small Tech LLC</div>
+    <div class="st-small">California LLC, B20250439627, formed 2026</div>
+    <div class="st-small">&copy; 2026 Paolo Bonaccorsi &middot; <a href="llms.txt">llms.txt</a></div>
+  </div>
+</footer>
+
+<script>
+/* With the base element above, "#top" would point at the home page; keep the skip link on this page. */
+document.querySelector('.skip-link').href = location.href.split('#')[0] + '#top';
+</script>
+<script src="site.js"></script>
+</body>
+</html>

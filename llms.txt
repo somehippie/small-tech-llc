@@ -1,0 +1,38 @@
+# Small Tech LLC
+
+> Paolo Bonaccorsi's one-person practice in Fremont, California, across creative direction, AI training and personal finance. Direction means he shapes the work with you; coaching means you learn to do it yourself. The common thread is separating signal from noise.
+
+Inquiries go by email to pbonaccorsi@gmail.com: say what you're working on and what's not working about it. The site has no logins and no forms that submit anywhere; the brief on the home page only drafts an email for the person to send. In browsers with WebMCP, the pages expose small_tech_contact, small_tech_services and, on the home page, small_tech_draft_inquiry, which drafts but never sends.
+
+## Pages
+
+- [Home](https://somehippie.github.io/small-tech-llc/): the practice, published artifacts, background and the brief
+- [Services](https://somehippie.github.io/small-tech-llc/services.html): the full menu, sorted into direction and coaching
+
+## Direction
+
+- [Artist and creator development](https://somehippie.github.io/small-tech-llc/services.html#svc-artist-development): Creative Direction. Shaping a release and finding the pocket for musicians; a theme you can run with for YouTubers.
+- [Web presence](https://somehippie.github.io/small-tech-llc/services.html#svc-web-presence): Creative Direction. A GitHub portfolio site, a Linktree landing page, and LinkedIn and GitHub profiles that point to each other.
+- [Operations consulting](https://somehippie.github.io/small-tech-llc/services.html#svc-operations): For data collection, QA, hardware testing and NPI teams.
+
+## Coaching
+
+- [File organization and backups](https://somehippie.github.io/small-tech-llc/services.html#svc-file-organization): AI Training. Using AI to sort years of files into a structure built around how you work.
+- [AI as a hobby](https://somehippie.github.io/small-tech-llc/services.html#svc-ai-hobby): AI Training. Which tools are worth your time and a first project to build.
+- [Credit card strategy](https://somehippie.github.io/small-tech-llc/services.html#svc-credit-cards): Personal Finance. The card, or combination of cards, that fits how you actually spend.
+- [Bills and the cost of living](https://somehippie.github.io/small-tech-llc/services.html#svc-bills): Personal Finance. A plan for annual bills, and spending less on food, travel and housing.
+- [Housing, jobs and commuting](https://somehippie.github.io/small-tech-llc/services.html#svc-housing): Personal Finance. An affordable place to live, a job where you want to be, and the commute that fits.
+- [Home-buying math](https://somehippie.github.io/small-tech-llc/services.html#svc-home-buying): Personal Finance. Mortgage, rent-vs-buy and investment calculations.
+- [Hobbies and life coaching](https://somehippie.github.io/small-tech-llc/services.html#svc-hobbies): Getting started with something new.
+- [Home and garden](https://somehippie.github.io/small-tech-llc/services.html#svc-home-garden): Home maintenance, gardening and house plants, and hot tub care.
+
+## Published artifacts
+
+- [Monthly Rotation - Music Calendar](https://somehippie.github.io/playlists/): a monthly playlist calendar, refreshed every Monday from Spotify. Source: [GitHub](https://github.com/somehippie/playlists)
+- [Privacy Curtain](https://github.com/somehippie/privacy-curtain): a Windows privacy overlay for when an AI has remote control of the machine. MIT-licensed.
+- [Fremont ballot measures, November 2026](https://claude.ai/artifact/615UaKHforP1SSn8RsK7M7): a plain-language voter guide with both sides of all 15 measures, kept as a record.
+
+## Contact
+
+- [Email Paolo](mailto:pbonaccorsi@gmail.com): the first step for any of the above
+- [The brief](https://somehippie.github.io/small-tech-llc/#contact): drafts that email in the browser; nothing is sent until the person sends it

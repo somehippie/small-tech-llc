@@ -23,11 +23,46 @@
 <link rel="stylesheet" href="design/components.css">
 <link rel="stylesheet" href="styles.css">
 <script>
-/* Theme: follows the system unless the visitor chose one here. Runs before paint to avoid a flash. */
-(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+/* Marks that scripts run, so the interactive parts show from the first paint. Theme: follows the system unless the visitor chose one here. Runs before paint to avoid a flash. */
+(function(){document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://somehippie.github.io/small-tech-llc/services.html",
+      "url": "https://somehippie.github.io/small-tech-llc/services.html",
+      "name": "Small Tech LLC: Services",
+      "isPartOf": { "@id": "https://somehippie.github.io/small-tech-llc/#site" },
+      "about": { "@id": "https://somehippie.github.io/small-tech-llc/#org" },
+      "mainEntity": { "@id": "https://somehippie.github.io/small-tech-llc/services.html#catalog" }
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://somehippie.github.io/small-tech-llc/services.html#catalog",
+      "name": "The full menu",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-artist-development", "name": "Artist and creator development", "category": "Creative Direction", "description": "For musicians: shaping a release and finding the pocket, from the song itself to how it's presented. For YouTubers: how to build a theme you can run with.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-web-presence", "name": "Web presence", "category": "Creative Direction", "description": "A portfolio site on GitHub, a Linktree landing page, and LinkedIn and GitHub profiles that point to each other, so the first impression is the one you meant.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-operations", "name": "Operations consulting", "category": "For teams", "description": "For data collection, QA, hardware testing and NPI teams: smoother processes, clearer communication, trackers and visuals people actually read, and a mindset that keeps the team moving.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-file-organization", "name": "File organization and backups", "category": "AI Training", "description": "Using AI to sort years of files into a folder structure and naming system built around how you work, with cleanup and backups included.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-ai-hobby", "name": "AI as a hobby", "category": "AI Training", "description": "For the curious: which tools are worth your time, a first project to build, and where to go once it clicks.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-credit-cards", "name": "Credit card strategy", "category": "Personal Finance", "description": "The card, or combination of cards, that fits how you actually spend. Usually no annual fee and 3-5% cash back per category.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-bills", "name": "Bills and the cost of living", "category": "Personal Finance", "description": "A plan for your annual bills, from insurance to subscriptions, with every benefit weighed against its cost. Plus ways to spend less on food, travel and housing, including jobs whose perks pick up part of the cost.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-housing", "name": "Housing, jobs and commuting", "category": "Personal Finance", "description": "An affordable place to live, house hacking included, and a job in the area you actually want to be in. Then the commute that fits: Tesla FSD, motorcycle, public transit or e-scooter.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-home-buying", "name": "Home-buying math", "category": "Personal Finance", "description": "Mortgage, rent-vs-buy, and investment calculations, laid out so the tradeoffs are clear.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-hobbies", "name": "Hobbies and life coaching", "category": "For life", "description": "Getting started with something new, plus life coaching that draws on financial and creative experience.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://somehippie.github.io/small-tech-llc/services.html#svc-home-garden", "name": "Home and garden", "category": "For the home", "description": "Home maintenance, gardening and house plants, and hot tub care.", "provider": { "@id": "https://somehippie.github.io/small-tech-llc/#org" } } }
+      ]
+    }
+  ]
+}
 </script>
 </head>
 <body data-flavor="st">
+<a class="skip-link st-label" href="#top">Skip to content</a>
 
 <header class="wrap">
   <div class="masthead">
@@ -48,108 +83,137 @@
   <section class="page-intro">
     <h1 class="st-display">The full menu.</h1>
     <p class="lede st-body soft">The specific things I help with, sorted by how we'd work on them. Most of it puts AI to work. All of it starts with what you actually want.</p>
+    <div class="menu-console">
+      <div class="chips" role="group" aria-label="Show services for">
+        <button type="button" class="chip st-label" data-solo="all" aria-pressed="true">Everything</button>
+        <button type="button" class="chip st-label ch-cd" data-solo="cd" aria-pressed="false"><span class="knob" aria-hidden="true"></span>Creative Direction</button>
+        <button type="button" class="chip st-label ch-ai" data-solo="ai" aria-pressed="false"><span class="knob" aria-hidden="true"></span>AI Training</button>
+        <button type="button" class="chip st-label ch-fin" data-solo="fin" aria-pressed="false"><span class="knob" aria-hidden="true"></span>Personal Finance</button>
+        <button type="button" class="chip st-label" data-solo="teams" aria-pressed="false">For teams</button>
+        <button type="button" class="chip st-label" data-solo="life" aria-pressed="false">For life</button>
+        <button type="button" class="chip st-label" data-solo="home" aria-pressed="false">For the home</button>
+      </div>
+      <div class="menu-tools">
+        <div class="field menu-search">
+          <label class="st-label" for="menu-q">Search the menu</label>
+          <input class="input" id="menu-q" type="search" autocomplete="off" aria-keyshortcuts="/" aria-describedby="menu-count">
+        </div>
+        <button type="button" class="btn btn-secondary menu-print">Print this menu</button>
+      </div>
+      <p class="st-small menu-count" id="menu-count" role="status">11 services</p>
+      <p class="st-body menu-empty" hidden>Nothing on the menu matches that. <a href="index.html#contact">Ask me anyway</a>.</p>
+    </div>
   </section>
 
-  <section id="direction">
+  <section id="direction" data-menu-section>
     <div class="section-intro">
       <h2 class="st-h2">Direction</h2>
       <p class="lede st-body soft">Bring your work, we'll amplify the signal together.</p>
     </div>
     <div class="section-body">
       <div class="services">
-        <article class="service">
+        <article class="service" id="svc-artist-development" data-practice="cd">
           <div class="service-head">
             <p class="service-tag st-label ch-cd"><span class="knob" aria-hidden="true"></span>Creative Direction</p>
             <h3 class="st-h3">Artist and creator development</h3>
           </div>
           <div class="service-body">
             <p class="st-body service-desc">For musicians: shaping a release and finding the pocket, from the song itself to how it's presented. For YouTubers: how to build a theme you can run with.</p>
+            <a class="ask st-small" href="index.html?about=artist-development#contact">Ask about this</a>
           </div>
         </article>
-        <article class="service">
+        <article class="service" id="svc-web-presence" data-practice="cd">
           <div class="service-head">
             <p class="service-tag st-label ch-cd"><span class="knob" aria-hidden="true"></span>Creative Direction</p>
             <h3 class="st-h3">Web presence</h3>
           </div>
           <div class="service-body">
             <p class="st-body service-desc">A portfolio site on GitHub, a Linktree landing page, and LinkedIn and GitHub profiles that point to each other, so the first impression is the one you meant.</p>
+            <a class="ask st-small" href="index.html?about=web-presence#contact">Ask about this</a>
           </div>
         </article>
-        <article class="service">
+        <article class="service" id="svc-operations" data-practice="teams">
           <div class="service-head">
             <p class="service-tag st-label">For teams</p>
             <h3 class="st-h3">Operations consulting</h3>
           </div>
           <div class="service-body">
             <p class="st-body service-desc">For data collection, QA, hardware testing and NPI teams: smoother processes, clearer communication, trackers and visuals people actually read, and a mindset that keeps the team moving.</p>
+            <a class="ask st-small" href="index.html?about=operations#contact">Ask about this</a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="coaching">
+  <section id="coaching" data-menu-section>
     <div class="section-intro">
       <h2 class="st-h2">Coaching</h2>
       <p class="lede st-body soft">Bring your questions, leave with skills.</p>
     </div>
     <div class="section-body">
       <div class="services">
-        <article class="service">
+        <article class="service" id="svc-file-organization" data-practice="ai">
           <div class="service-head">
             <p class="service-tag st-label ch-ai"><span class="knob" aria-hidden="true"></span>AI Training</p>
             <h3 class="st-h3">File organization and backups</h3>
           </div>
           <div class="service-body">
             <p class="st-body service-desc">Using AI to sort years of files into a folder structure and naming system built around how you work, with cleanup and backups included.</p>
+            <a class="ask st-small" href="index.html?about=file-organization#contact">Ask about this</a>
           </div>
         </article>
-        <article class="service">
+        <article class="service" id="svc-ai-hobby" data-practice="ai">
           <div class="service-head">
             <p class="service-tag st-label ch-ai"><span class="knob" aria-hidden="true"></span>AI Training</p>
             <h3 class="st-h3">AI as a hobby</h3>
           </div>
           <div class="service-body">
             <p class="st-body service-desc">For the curious: which tools are worth your time, a first project to build, and where to go once it clicks.</p>
+            <a class="ask st-small" href="index.html?about=ai-hobby#contact">Ask about this</a>
           </div>
         </article>
-        <article class="service">
+        <article class="service" id="svc-credit-cards" data-practice="fin">
           <div class="service-head">
             <p class="service-tag st-label ch-fin"><span class="knob" aria-hidden="true"></span>Personal Finance</p>
             <h3 class="st-h3">Credit card strategy</h3>
           </div>
           <div class="service-body">
             <p class="st-body service-desc">The card, or combination of cards, that fits how you actually spend. Usually no annual fee and 3-5% cash back per category.</p>
+            <a class="ask st-small" href="index.html?about=credit-cards#contact">Ask about this</a>
           </div>
         </article>
-        <article class="service">
+        <article class="service" id="svc-bills" data-practice="fin">
           <div class="service-head">
             <p class="service-tag st-label ch-fin"><span class="knob" aria-hidden="true"></span>Personal Finance</p>
             <h3 class="st-h3">Bills and the cost of living</h3>
           </div>
           <div class="service-body">
             <p class="st-body service-desc">A plan for your annual bills, from insurance to subscriptions, with every benefit weighed against its cost. Plus ways to spend less on food, travel and housing, including jobs whose perks pick up part of the cost.</p>
+            <a class="ask st-small" href="index.html?about=bills#contact">Ask about this</a>
           </div>
         </article>
-        <article class="service">
+        <article class="service" id="svc-housing" data-practice="fin">
           <div class="service-head">
             <p class="service-tag st-label ch-fin"><span class="knob" aria-hidden="true"></span>Personal Finance</p>
             <h3 class="st-h3">Housing, jobs and commuting</h3>
           </div>
           <div class="service-body">
             <p class="st-body service-desc">An affordable place to live, house hacking included, and a job in the area you actually want to be in. Then the commute that fits: Tesla FSD, motorcycle, public transit or e-scooter.</p>
+            <a class="ask st-small" href="index.html?about=housing#contact">Ask about this</a>
           </div>
         </article>
-        <article class="service">
+        <article class="service" id="svc-home-buying" data-practice="fin">
           <div class="service-head">
             <p class="service-tag st-label ch-fin"><span class="knob" aria-hidden="true"></span>Personal Finance</p>
             <h3 class="st-h3">Home-buying math</h3>
           </div>
           <div class="service-body">
             <p class="st-body service-desc">Mortgage, rent-vs-buy, and investment calculations, laid out so the tradeoffs are clear.</p>
+            <a class="ask st-small" href="index.html?about=home-buying#contact">Ask about this</a>
           </div>
         </article>
-        <article class="service">
+        <article class="service" id="svc-hobbies" data-practice="life">
           <div class="service-head">
             <p class="service-tag st-label">For life</p>
             <h3 class="st-h3">Hobbies and life coaching</h3>
@@ -169,9 +233,10 @@
               <li>Bay Area and California travel</li>
               <li class="wide">Playlists and music discovery on Instagram, Spotify and YouTube</li>
             </ul>
+            <a class="ask st-small" href="index.html?about=hobbies#contact">Ask about this</a>
           </div>
         </article>
-        <article class="service">
+        <article class="service" id="svc-home-garden" data-practice="home">
           <div class="service-head">
             <p class="service-tag st-label">For the home</p>
             <h3 class="st-h3">Home and garden</h3>
@@ -191,6 +256,7 @@
                 <p class="st-body service-desc">Water chemistry, maintenance schedules, and troubleshooting.</p>
               </div>
             </div>
+            <a class="ask st-small" href="index.html?about=home-garden#contact">Ask about this</a>
           </div>
         </article>
       </div>
@@ -202,7 +268,10 @@
       <h2 class="st-h2">Start a conversation</h2>
       <div class="contact-body">
         <p class="st-body">Whichever one this is about, the first step is the same: say what you're working on and what's not working about it.</p>
-        <a class="btn btn-primary" href="mailto:pbonaccorsi@gmail.com">Email pbonaccorsi@gmail.com</a>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:pbonaccorsi@gmail.com">Email pbonaccorsi@gmail.com</a>
+          <a class="btn btn-secondary" href="index.html#contact">Write a short brief</a>
+        </div>
       </div>
     </div>
   </section>
@@ -213,7 +282,7 @@
   <div class="footer">
     <div class="fmark st-label"><img src="favicon.svg" alt="">Small Tech LLC</div>
     <div class="st-small">California LLC, B20250439627, formed 2026</div>
-    <div class="st-small">&copy; 2026 Paolo Bonaccorsi</div>
+    <div class="st-small">&copy; 2026 Paolo Bonaccorsi &middot; <a href="llms.txt">llms.txt</a></div>
   </div>
 </footer>
 

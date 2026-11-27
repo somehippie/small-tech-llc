@@ -1,6 +1,6 @@
 # Small Tech LLC site
 
-Static site for Small Tech LLC, Paolo Bonaccorsi's California practice across A&R and artist development, AI training, personal finance coaching, and creative direction. Two pages share one masthead, footer and stylesheet: `index.html` (home) and `services.html` (the full menu of services). Hosted on GitHub Pages. No build step: `index.html`, `services.html`, `styles.css`, `site.js`, `assets/`, favicons.
+Static site for Small Tech LLC, Paolo Bonaccorsi's California practice across A&R and artist development, AI training, personal finance coaching, and creative direction. Two pages share one masthead, footer and stylesheet: `index.html` (home) and `services.html` (the full menu of services), plus `404.html`. Hosted on GitHub Pages. No build step: `index.html`, `services.html`, `404.html`, `styles.css`, `site.js`, `llms.txt`, `sitemap.xml`, `assets/`, favicons. The README's "Interactive layer" section lists what `site.js` does and the four places a service lives.
 
 ## Design system
 
@@ -36,4 +36,4 @@ Plain, specific, a little dry; first person singular, sentence case. Keep existi
 
 ## Workflow
 
-Before committing, open `index.html` and `services.html` locally and check light and dark at 390px and 1280px widths. Keep the masthead, nav and footer the same on both pages. Keep keyboard focus visible and respect reduced motion. Do not push without Paolo's go-ahead.
+Before committing, open `index.html` and `services.html` locally and check light and dark at 390px and 1280px widths. Keep the masthead, nav and footer the same on every page. Keep keyboard focus visible and respect reduced motion. Do not push without Paolo's go-ahead.
