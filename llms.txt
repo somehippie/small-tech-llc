@@ -12,6 +12,7 @@ Inquiries go by email to pbonaccorsi@gmail.com: say what you're working on and w
 ## Engagements
 
 - [AI consulting for professionals](https://somehippie.github.io/small-tech-llc/services.html#svc-ai-consulting): AI Training. Monthly work with owners and professionals putting AI to work in their business.
+- [New-laptop setup for Claude Code](https://somehippie.github.io/small-tech-llc/services.html#svc-laptop-setup): AI Training. A new laptop set up for professional work with Claude Code, with guardrails, backups and phone alerts, and a first real project done with it.
 - [Operations, QA and NPI](https://somehippie.github.io/small-tech-llc/services.html#svc-operations): For teams. Program management for data collection, QA, hardware testing and NPI teams, by the project or the month.
 
 ## Direction
